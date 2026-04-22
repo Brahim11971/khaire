@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Image from "next/image"
 import { X, ChevronLeft, ChevronRight, Play } from "lucide-react"
 
@@ -30,20 +30,6 @@ const details = [
 export function DetailGallery() {
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [videoOpen, setVideoOpen] = useState(false)
-
-  // Load TikTok embed script
-  useEffect(() => {
-    if (videoOpen) {
-      const script = document.createElement("script")
-      script.src = "https://www.tiktok.com/embed.js"
-      script.async = true
-      document.body.appendChild(script)
-      return () => {
-        document.body.removeChild(script)
-      }
-    }
-  }, [videoOpen])
 
   const openLightbox = (index: number) => {
     setCurrentIndex(index)
@@ -97,56 +83,17 @@ export function DetailGallery() {
 
         {/* Video Button */}
         <div className="text-center mt-10 lg:mt-12 pb-20 lg:pb-0">
-          <button
-            type="button"
-            onClick={() => setVideoOpen(true)}
-            className="cursor-pointer relative z-10 inline-flex items-center gap-2 px-8 py-3.5 border border-[#1a1a1a] rounded-full text-xs tracking-[0.15em] hover:bg-[#1a1a1a] hover:text-white transition-colors"
+          <a
+            href="https://www.tiktok.com/@belkhirchaimae/video/7481632230843848993"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-3.5 border border-[#1a1a1a] rounded-full text-xs tracking-[0.15em] hover:bg-[#1a1a1a] hover:text-white transition-colors"
           >
             <Play size={14} />
             VOIR LA VIDEO
-          </button>
+          </a>
         </div>
       </div>
-
-      {/* TikTok Video Modal */}
-      {videoOpen && (
-        <div
-          className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4"
-          onClick={() => setVideoOpen(false)}
-        >
-          <button
-            type="button"
-            onClick={() => setVideoOpen(false)}
-            className="absolute top-6 right-6 text-white/80 hover:text-white transition-colors z-10"
-            aria-label="Fermer"
-          >
-            <X size={28} />
-          </button>
-
-          <div 
-            className="relative w-full max-w-[340px] mx-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <blockquote 
-              className="tiktok-embed rounded-xl overflow-hidden" 
-              cite="https://www.tiktok.com/@belkhirchaimae/video/7481632230843848993"
-              data-video-id="7481632230843848993"
-              style={{ maxWidth: '340px', margin: '0 auto' }}
-            >
-              <section>
-                <a 
-                  target="_blank" 
-                  title="@belkhirchaimae" 
-                  href="https://www.tiktok.com/@belkhirchaimae?refer=embed"
-                  rel="noopener noreferrer"
-                >
-                  @belkhirchaimae
-                </a>
-              </section>
-            </blockquote>
-          </div>
-        </div>
-      )}
 
       {/* Lightbox */}
       {lightboxOpen && (
