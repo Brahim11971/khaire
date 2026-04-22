@@ -17,27 +17,13 @@ export default function Home() {
       <main>
         <Hero />
         <TrustBadges />
-        
-        {/* Detail Gallery + About/CTA side by side on desktop */}
-        <div className="grid lg:grid-cols-2">
-          <DetailGallery />
-          <div className="flex flex-col">
-            <AboutSection />
-            <CtaBanner />
-          </div>
-        </div>
-        
-        {/* Collections + Why Khaire side by side on desktop */}
-        <div className="grid lg:grid-cols-2">
-          <Collections />
-          <WhyKhaire />
-        </div>
-        
-        {/* Press + FAQ side by side on desktop */}
-        <div className="grid lg:grid-cols-2">
-          <Press />
-          <Faq />
-        </div>
+        <DetailGallery />
+        <AboutSection />
+        <CtaBanner />
+        <Collections />
+        <WhyKhaire />
+        <Press />
+        <Faq />
       </main>
       <Footer />
     </div>

@@ -34,35 +34,38 @@ export function Faq() {
   }
 
   return (
-    <section id="faq" className="py-12 lg:py-16 bg-[#f5f1eb]">
-      <div className="px-6 lg:px-10">
+    <section id="faq" className="py-16 lg:py-24 bg-[#faf9f7]">
+      <div className="max-w-[700px] mx-auto px-6 lg:px-10">
         {/* Header */}
-        <div className="mb-8">
-          <span className="text-[10px] tracking-[0.2em] text-[#6b6b6b] block mb-1.5 uppercase">FAQ</span>
-          <h2 className="text-xl lg:text-2xl font-light text-[#1a1a1a]">Questions frequentes</h2>
+        <div className="mb-10">
+          <span className="text-[11px] tracking-[0.2em] text-[#c4a574] block mb-4 uppercase font-medium">FAQ</span>
+          <h2 className="text-3xl lg:text-4xl font-light text-[#1a1a1a]">Questions frequentes</h2>
         </div>
 
-        {/* FAQ List */}
-        <div className="space-y-0">
+        {/* FAQ Card */}
+        <div className="bg-white rounded-2xl border border-[#e5e0d8] overflow-hidden">
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b border-[#e5e0d8]">
+            <div 
+              key={index} 
+              className={index !== faqs.length - 1 ? "border-b border-[#e5e0d8]" : ""}
+            >
               <button
                 type="button"
                 onClick={() => toggleFaq(index)}
-                className="w-full py-4 flex items-start justify-between gap-4 text-left hover:text-[#3d5a45] transition-colors"
+                className="w-full p-5 lg:p-6 flex items-start justify-between gap-4 text-left hover:bg-[#faf9f7] transition-colors"
                 aria-expanded={openIndex === index}
               >
-                <span className="text-sm font-medium text-[#1a1a1a]">{faq.question}</span>
+                <span className="text-[15px] text-[#1a1a1a] leading-relaxed">{faq.question}</span>
                 <span className={`flex-shrink-0 transition-transform duration-200 ${openIndex === index ? "rotate-45" : ""}`}>
-                  <Plus size={16} className="text-[#6b6b6b]" />
+                  <Plus size={18} className="text-[#c4a574]" />
                 </span>
               </button>
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? "max-h-32 pb-4" : "max-h-0"
+                  openIndex === index ? "max-h-40 pb-5 lg:pb-6" : "max-h-0"
                 }`}
               >
-                <p className="text-xs text-[#6b6b6b] leading-relaxed pr-8">{faq.answer}</p>
+                <p className="text-sm text-[#6b6b6b] leading-relaxed px-5 lg:px-6">{faq.answer}</p>
               </div>
             </div>
           ))}

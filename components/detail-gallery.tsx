@@ -51,22 +51,22 @@ export function DetailGallery() {
   }
 
   return (
-    <section id="details" className="py-12 lg:py-16 bg-[#faf9f7]">
-      <div className="px-6 lg:px-10">
+    <section id="details" className="py-16 lg:py-24 bg-[#faf9f7]">
+      <div className="max-w-[900px] mx-auto px-6 lg:px-10">
         {/* Header */}
-        <div className="text-center mb-10">
-          <span className="text-[#c4a574] text-lg">+</span>
-          <h2 className="text-xl lg:text-2xl font-light mt-3 text-[#1a1a1a]">Regardez de plus pres</h2>
+        <div className="text-center mb-10 lg:mb-12">
+          <span className="text-[#c4a574] text-xl inline-block mb-4">+</span>
+          <h2 className="text-3xl lg:text-4xl font-light text-[#1a1a1a]">Regardez de plus pres</h2>
         </div>
 
         {/* Gallery Grid - 2x2 layout */}
-        <div className="grid grid-cols-2 gap-3 lg:gap-4">
+        <div className="grid grid-cols-2 gap-4 lg:gap-5">
           {details.map((detail, index) => (
             <button
               key={index}
               type="button"
               onClick={() => openLightbox(index)}
-              className="group relative aspect-[4/5] overflow-hidden rounded-md"
+              className="group relative aspect-square overflow-hidden rounded-lg"
             >
               <Image
                 src={detail.src}
@@ -74,8 +74,7 @@ export function DetailGallery() {
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-              <span className="absolute bottom-3 left-3 text-white text-xs font-medium">
+              <span className="absolute bottom-4 left-4 text-[#1a1a1a] text-sm font-light">
                 {detail.caption}
               </span>
             </button>
@@ -83,10 +82,10 @@ export function DetailGallery() {
         </div>
 
         {/* Video Button */}
-        <div className="text-center mt-8">
+        <div className="text-center mt-10 lg:mt-12">
           <button
             type="button"
-            className="inline-flex items-center px-6 py-3 border border-[#1a1a1a] text-xs tracking-[0.1em] hover:bg-[#1a1a1a] hover:text-white transition-colors"
+            className="inline-flex items-center px-8 py-3.5 border border-[#1a1a1a] rounded-full text-xs tracking-[0.15em] hover:bg-[#1a1a1a] hover:text-white transition-colors"
           >
             VOIR LA VIDEO COMPLETE
           </button>
@@ -128,7 +127,7 @@ export function DetailGallery() {
               src={details[currentIndex].src}
               alt={details[currentIndex].alt}
               width={800}
-              height={1000}
+              height={800}
               className="max-h-[85vh] w-auto object-contain"
             />
           </div>
