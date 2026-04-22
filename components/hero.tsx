@@ -29,15 +29,16 @@ export function Hero() {
     <section className="h-screen">
       <div className="grid lg:grid-cols-[1fr,420px] xl:grid-cols-[1fr,480px] h-full">
         {/* Left: Image Section with 4:5 aspect ratio image */}
-        <div className="relative overflow-hidden bg-[#1a1a1a]">
+        <div className="relative overflow-hidden bg-[#1a1a1a] h-full">
           {/* Main Image Container - fills full height */}
-          <div className="relative h-[60vh] lg:h-full">
+          <div className="relative h-full w-full">
             <Image
               src={productImages[currentImage].src}
               alt={productImages[currentImage].alt}
               fill
               className="object-cover"
               priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
 
             {/* Content Overlay */}
