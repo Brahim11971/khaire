@@ -77,7 +77,13 @@ export function Hero() {
 
         {/* Right: Product Details Panel */}
         <div className="bg-[#faf9f7] p-6 lg:p-8 xl:p-10 flex flex-col lg:pt-24">
-          {/* Badge */}
+          {/* Atelier Status Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#3d5a45]/30 bg-[#3d5a45]/5 mb-5 self-start">
+            <span className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse" />
+            <span className="text-sm text-[#4a4a4a]">Atelier ouvert · reponse en ~5 min</span>
+          </div>
+
+          {/* Edition Badge */}
           <div className="flex items-center gap-2 text-sm text-[#6b6b6b] mb-2">
             <span className="text-[#c4a574]">+</span>
             <span className="tracking-[0.15em] text-[10px] uppercase">Edition tres limitee</span>
