@@ -96,6 +96,16 @@
     overflow: hidden;
   }
   
+  /* Hide scrollbar */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
   /* Animation utilities */
   .animate-in {
     animation-name: animate-in;
