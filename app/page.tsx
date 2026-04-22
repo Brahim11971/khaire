@@ -12,18 +12,32 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#faf9f7]">
       <Header />
       <main>
         <Hero />
         <TrustBadges />
-        <DetailGallery />
-        <AboutSection />
-        <CtaBanner />
-        <Collections />
-        <WhyKhaire />
-        <Press />
-        <Faq />
+        
+        {/* Detail Gallery + About/CTA side by side on desktop */}
+        <div className="grid lg:grid-cols-2">
+          <DetailGallery />
+          <div className="flex flex-col">
+            <AboutSection />
+            <CtaBanner />
+          </div>
+        </div>
+        
+        {/* Collections + Why Khaire side by side on desktop */}
+        <div className="grid lg:grid-cols-2">
+          <Collections />
+          <WhyKhaire />
+        </div>
+        
+        {/* Press + FAQ side by side on desktop */}
+        <div className="grid lg:grid-cols-2">
+          <Press />
+          <Faq />
+        </div>
       </main>
       <Footer />
     </div>

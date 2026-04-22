@@ -5,24 +5,24 @@ import { Plus } from "lucide-react"
 
 const faqs = [
   {
-    question: "Puis-je échanger si la pièce ne me convient pas ?",
+    question: "Puis-je echanger si la piece ne me convient pas ?",
     answer:
-      "Oui, vous disposez de 24h après réception pour demander un échange. Contactez-nous sur WhatsApp et nous organiserons le retour et l'envoi d'une nouvelle taille.",
+      "Oui, vous disposez de 24h apres reception pour demander un echange. Contactez-nous sur WhatsApp et nous organiserons le retour.",
   },
   {
-    question: "En combien de temps répondez-vous sur WhatsApp ?",
+    question: "En combien de temps repondez-vous sur WhatsApp ?",
     answer:
-      "Notre équipe répond généralement en moins de 5 minutes pendant les heures d'ouverture (9h-21h). En dehors de ces horaires, nous vous répondrons dès le lendemain matin.",
+      "Notre equipe repond generalement en moins de 5 minutes pendant les heures d'ouverture (9h-21h).",
   },
   {
     question: "Comment se passe la livraison ?",
     answer:
-      "La livraison est effectuée en 24-48h partout au Maroc. Vous recevrez un SMS avec le suivi de votre colis. Le paiement du solde se fait à la livraison.",
+      "La livraison est effectuee en 24-48h partout au Maroc. Le paiement du solde se fait a la livraison.",
   },
   {
-    question: "Comment réserver ma pièce ?",
+    question: "Comment reserver ma piece ?",
     answer:
-      "Contactez-nous sur WhatsApp, choisissez votre taille et versez un acompte de 50%. Votre pièce est alors réservée et sera livrée sous 24-48h. Le solde est payé à la livraison.",
+      "Contactez-nous sur WhatsApp, choisissez votre taille et versez un acompte de 50%. Votre piece est alors reservee.",
   },
 ]
 
@@ -34,12 +34,12 @@ export function Faq() {
   }
 
   return (
-    <section id="faq" className="py-16 lg:py-24 bg-[#f5f1eb]">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-12 lg:py-16 bg-[#f5f1eb]">
+      <div className="px-6 lg:px-10">
         {/* Header */}
-        <div className="mb-10">
-          <span className="text-xs tracking-[0.2em] text-[#6b6b6b] block mb-2 uppercase">FAQ</span>
-          <h2 className="text-2xl lg:text-3xl font-light text-[#1a1a1a]">Questions fréquentes</h2>
+        <div className="mb-8">
+          <span className="text-[10px] tracking-[0.2em] text-[#6b6b6b] block mb-1.5 uppercase">FAQ</span>
+          <h2 className="text-xl lg:text-2xl font-light text-[#1a1a1a]">Questions frequentes</h2>
         </div>
 
         {/* FAQ List */}
@@ -49,20 +49,20 @@ export function Faq() {
               <button
                 type="button"
                 onClick={() => toggleFaq(index)}
-                className="w-full py-5 flex items-start justify-between gap-4 text-left hover:text-[#3d5a45] transition-colors"
+                className="w-full py-4 flex items-start justify-between gap-4 text-left hover:text-[#3d5a45] transition-colors"
                 aria-expanded={openIndex === index}
               >
-                <span className="font-medium text-[#1a1a1a]">{faq.question}</span>
-                <span className={`flex-shrink-0 mt-1 transition-transform duration-200 ${openIndex === index ? "rotate-45" : ""}`}>
-                  <Plus size={18} className="text-[#6b6b6b]" />
+                <span className="text-sm font-medium text-[#1a1a1a]">{faq.question}</span>
+                <span className={`flex-shrink-0 transition-transform duration-200 ${openIndex === index ? "rotate-45" : ""}`}>
+                  <Plus size={16} className="text-[#6b6b6b]" />
                 </span>
               </button>
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? "max-h-40 pb-5" : "max-h-0"
+                  openIndex === index ? "max-h-32 pb-4" : "max-h-0"
                 }`}
               >
-                <p className="text-[#6b6b6b] leading-relaxed pr-8">{faq.answer}</p>
+                <p className="text-xs text-[#6b6b6b] leading-relaxed pr-8">{faq.answer}</p>
               </div>
             </div>
           ))}

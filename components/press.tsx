@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const pressItems = [
   {
-    quote: "Khaire fait rayonner le savoir-faire marocain à travers des pièces d'exception.",
+    quote: "Khaire fait rayonner le savoir-faire marocain a travers des pieces d'exception.",
     source: "MBC5",
     image: "/assets/images/mbc5-event.jpg",
   },
@@ -24,42 +24,42 @@ export function Press() {
   }
 
   return (
-    <section className="py-16 lg:py-24 bg-[#faf9f7]">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+    <section className="py-12 lg:py-16 bg-[#faf9f7]">
+      <div className="px-6 lg:px-10">
+        <div className="grid lg:grid-cols-[1fr,1.2fr] gap-6 items-center">
           {/* Content */}
           <div>
-            <span className="text-xs tracking-[0.2em] text-[#6b6b6b] block mb-6 uppercase">Presse</span>
-            <h2 className="text-2xl lg:text-3xl font-light mb-8 text-[#1a1a1a]">Ils parlent de Khaire</h2>
+            <span className="text-[10px] tracking-[0.2em] text-[#6b6b6b] block mb-4 uppercase">Presse</span>
+            <h2 className="text-xl lg:text-2xl font-light mb-6 text-[#1a1a1a]">Ils parlent de Khaire</h2>
 
-            <blockquote className="text-xl lg:text-2xl font-light leading-relaxed mb-6 text-[#1a1a1a]">
+            <blockquote className="text-lg lg:text-xl font-light leading-relaxed mb-4 text-[#1a1a1a]">
               &ldquo;{pressItems[currentIndex].quote}&rdquo;
             </blockquote>
-            <p className="text-[#6b6b6b]">— {pressItems[currentIndex].source}</p>
+            <p className="text-sm text-[#6b6b6b]">— {pressItems[currentIndex].source}</p>
 
             {/* Navigation */}
-            <div className="flex items-center gap-4 mt-8">
+            <div className="flex items-center gap-3 mt-6">
               <button
                 type="button"
                 onClick={prevSlide}
-                className="w-10 h-10 rounded-full border border-[#e5e0d8] flex items-center justify-center hover:bg-[#f5f1eb] transition-colors"
-                aria-label="Citation précédente"
+                className="w-9 h-9 rounded-full border border-[#e5e0d8] flex items-center justify-center hover:bg-[#f5f1eb] transition-colors"
+                aria-label="Citation precedente"
               >
-                <ChevronLeft size={20} />
+                <ChevronLeft size={16} />
               </button>
               <button
                 type="button"
                 onClick={nextSlide}
-                className="w-10 h-10 rounded-full border border-[#e5e0d8] flex items-center justify-center hover:bg-[#f5f1eb] transition-colors"
+                className="w-9 h-9 rounded-full border border-[#e5e0d8] flex items-center justify-center hover:bg-[#f5f1eb] transition-colors"
                 aria-label="Citation suivante"
               >
-                <ChevronRight size={20} />
+                <ChevronRight size={16} />
               </button>
             </div>
           </div>
 
           {/* Image */}
-          <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+          <div className="relative aspect-[4/3] rounded-md overflow-hidden">
             <Image
               src={pressItems[currentIndex].image}
               alt={`${pressItems[currentIndex].source} - Khaire`}

@@ -12,8 +12,8 @@ const details = [
   },
   {
     src: "/assets/images/gallery-2.jpg",
-    alt: "Finitions soignées",
-    caption: "Finitions soignées",
+    alt: "Finitions soignees",
+    caption: "Finitions soignees",
   },
   {
     src: "/assets/images/gallery-3.jpg",
@@ -34,12 +34,12 @@ export function DetailGallery() {
   const openLightbox = (index: number) => {
     setCurrentIndex(index)
     setLightboxOpen(true)
-    document.body.classList.add("no-scroll")
+    document.body.classList.add("overflow-hidden")
   }
 
   const closeLightbox = () => {
     setLightboxOpen(false)
-    document.body.classList.remove("no-scroll")
+    document.body.classList.remove("overflow-hidden")
   }
 
   const nextImage = () => {
@@ -51,22 +51,22 @@ export function DetailGallery() {
   }
 
   return (
-    <section id="details" className="py-16 lg:py-24 bg-[#faf9f7]">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="details" className="py-12 lg:py-16 bg-[#faf9f7]">
+      <div className="px-6 lg:px-10">
         {/* Header */}
-        <div className="text-center mb-12">
-          <span className="text-[#c4a574] text-2xl">✦</span>
-          <h2 className="text-2xl lg:text-3xl font-light mt-4 text-[#1a1a1a]">Regardez de plus près</h2>
+        <div className="text-center mb-10">
+          <span className="text-[#c4a574] text-lg">+</span>
+          <h2 className="text-xl lg:text-2xl font-light mt-3 text-[#1a1a1a]">Regardez de plus pres</h2>
         </div>
 
         {/* Gallery Grid - 2x2 layout */}
-        <div className="grid grid-cols-2 gap-4 lg:gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 gap-3 lg:gap-4">
           {details.map((detail, index) => (
             <button
               key={index}
               type="button"
               onClick={() => openLightbox(index)}
-              className="group relative aspect-[4/5] overflow-hidden rounded-lg"
+              className="group relative aspect-[4/5] overflow-hidden rounded-md"
             >
               <Image
                 src={detail.src}
@@ -74,8 +74,8 @@ export function DetailGallery() {
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <span className="absolute bottom-4 left-4 text-white text-sm font-medium">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+              <span className="absolute bottom-3 left-3 text-white text-xs font-medium">
                 {detail.caption}
               </span>
             </button>
@@ -83,12 +83,12 @@ export function DetailGallery() {
         </div>
 
         {/* Video Button */}
-        <div className="text-center mt-10">
+        <div className="text-center mt-8">
           <button
             type="button"
-            className="inline-flex items-center gap-2 px-8 py-3.5 border border-[#1a1a1a] text-sm tracking-wider hover:bg-[#1a1a1a] hover:text-white transition-colors"
+            className="inline-flex items-center px-6 py-3 border border-[#1a1a1a] text-xs tracking-[0.1em] hover:bg-[#1a1a1a] hover:text-white transition-colors"
           >
-            VOIR LA VIDÉO COMPLÈTE
+            VOIR LA VIDEO COMPLETE
           </button>
         </div>
       </div>
@@ -105,7 +105,7 @@ export function DetailGallery() {
             className="absolute top-6 right-6 text-white/80 hover:text-white transition-colors"
             aria-label="Fermer"
           >
-            <X size={32} />
+            <X size={28} />
           </button>
 
           <button
@@ -114,14 +114,14 @@ export function DetailGallery() {
               e.stopPropagation()
               prevImage()
             }}
-            className="absolute left-6 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-colors"
-            aria-label="Image précédente"
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-colors"
+            aria-label="Image precedente"
           >
-            <ChevronLeft size={40} />
+            <ChevronLeft size={36} />
           </button>
 
           <div
-            className="relative max-w-4xl max-h-[90vh] mx-4"
+            className="relative max-w-3xl max-h-[85vh] mx-4"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
@@ -129,7 +129,7 @@ export function DetailGallery() {
               alt={details[currentIndex].alt}
               width={800}
               height={1000}
-              className="max-h-[90vh] w-auto object-contain"
+              className="max-h-[85vh] w-auto object-contain"
             />
           </div>
 
@@ -139,10 +139,10 @@ export function DetailGallery() {
               e.stopPropagation()
               nextImage()
             }}
-            className="absolute right-6 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-colors"
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-colors"
             aria-label="Image suivante"
           >
-            <ChevronRight size={40} />
+            <ChevronRight size={36} />
           </button>
 
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/60 text-sm">
