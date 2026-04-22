@@ -99,15 +99,17 @@ export function Hero() {
               >
                 DECOUVRIR LA PIECE
               </a>
-              <button
-                type="button"
+              <a
+                href="https://www.tiktok.com/@belkhirchaimae/video/7481632230843848993"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 text-xs tracking-[0.1em] hover:text-white/80 transition-colors group"
               >
                 <span className="flex items-center justify-center w-11 h-11 rounded-full border border-white/50 group-hover:border-white transition-colors">
                   <Play size={12} fill="currentColor" className="ml-0.5" />
                 </span>
                 VOIR LA VIDEO
-              </button>
+              </a>
             </div>
           </div>
         </div>
