@@ -26,10 +26,10 @@ export function Hero() {
   const [currentImage, setCurrentImage] = useState(0)
 
   return (
-    <section>
-      <div className="lg:grid lg:grid-cols-[1fr,420px] xl:grid-cols-[1fr,480px] lg:h-screen">
+    <section className="lg:h-screen">
+      <div className="lg:grid lg:grid-cols-[1fr,420px] xl:grid-cols-[1fr,480px] h-full">
         {/* Left: Image Section - 70vh on mobile, full height on desktop */}
-        <div className="relative overflow-hidden bg-[#1a1a1a] h-[70vh] lg:h-full">
+        <div className="relative overflow-hidden bg-[#1a1a1a] h-[70vh] lg:h-screen">
           {/* Main Image Container - fills full height */}
           <div className="absolute inset-0">
             <Image
