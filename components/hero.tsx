@@ -5,11 +5,11 @@ import Image from "next/image"
 import { Play, Star, Clock, Truck, RefreshCw, Shield } from "lucide-react"
 
 const productImages = [
-  { src: "/assets/images/hero.jpg", alt: "Le Jabador Khaire - Vue principale" },
-  { src: "/assets/images/gallery-1.jpg", alt: "Le Jabador Khaire - Detail broderie" },
-  { src: "/assets/images/gallery-2.jpg", alt: "Le Jabador Khaire - Finitions" },
-  { src: "/assets/images/gallery-3.jpg", alt: "Le Jabador Khaire - Boutons" },
-  { src: "/assets/images/gallery-4.jpg", alt: "Le Jabador Khaire - Tissu" },
+  { src: "/images/hero-main.png", alt: "Le Jabador Khaire - Vue principale" },
+  { src: "/images/thumb-1.png", alt: "Le Jabador Khaire - Vue complete" },
+  { src: "/images/thumb-2.png", alt: "Le Jabador Khaire - Pose alternative" },
+  { src: "/images/thumb-3.png", alt: "Le Jabador Khaire - Detail broderie" },
+  { src: "/images/thumb-4.png", alt: "Le Jabador Khaire - Ceinture et tissu" },
 ]
 
 const sizes = ["S / M", "L / XL"]
