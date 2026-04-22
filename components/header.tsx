@@ -65,18 +65,14 @@ export function Header() {
           {/* Center: Logo + Nav */}
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center">
-              {isScrolled ? (
-                <Image
-                  src="/assets/images/logo-wordmark.png"
-                  alt="Khaire"
-                  width={120}
-                  height={32}
-                  className="h-6 lg:h-7 w-auto"
-                  priority
-                />
-              ) : (
-                <span className="text-xl lg:text-2xl font-light tracking-[0.3em] text-white">KHAIRE</span>
-              )}
+              <Image
+                src={isScrolled ? "/assets/images/logo-wordmark.png" : "/images/logo-white.png"}
+                alt="Khaire"
+                width={120}
+                height={32}
+                className="h-6 lg:h-7 w-auto"
+                priority
+              />
             </Link>
 
             {/* Desktop Navigation */}
