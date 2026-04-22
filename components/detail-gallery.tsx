@@ -96,11 +96,14 @@ export function DetailGallery() {
         </div>
 
         {/* Video Button */}
-        <div className="text-center mt-10 lg:mt-12">
+        <div className="text-center mt-10 lg:mt-12 pb-20 lg:pb-0">
           <button
             type="button"
-            onClick={() => setVideoOpen(true)}
-            className="inline-flex items-center gap-2 px-8 py-3.5 border border-[#1a1a1a] rounded-full text-xs tracking-[0.15em] hover:bg-[#1a1a1a] hover:text-white transition-colors"
+            onClick={() => {
+              console.log("[v0] Video button clicked, setting videoOpen to true")
+              setVideoOpen(true)
+            }}
+            className="relative z-10 inline-flex items-center gap-2 px-8 py-3.5 border border-[#1a1a1a] rounded-full text-xs tracking-[0.15em] hover:bg-[#1a1a1a] hover:text-white transition-colors"
           >
             <Play size={14} />
             VOIR LA VIDEO
@@ -111,7 +114,7 @@ export function DetailGallery() {
       {/* TikTok Video Modal */}
       {videoOpen && (
         <div
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
+          className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4"
           onClick={() => setVideoOpen(false)}
         >
           <button
