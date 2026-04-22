@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image"
+import { useEffect, useRef } from "react"
 
 const mbc5Images = [
   { src: "/images/mbc5-1.png", alt: "Le Jabador Khaire porte sur MBC5 - Photo de groupe" },
@@ -6,6 +9,21 @@ const mbc5Images = [
 ]
 
 export function Press() {
+  const scrollRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      const style = document.createElement('style')
+      style.textContent = `
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      `
+      document.head.appendChild(style)
+      return () => { document.head.removeChild(style) }
+    }
+  }, [])
+
   return (
     <section id="fondatrice" className="bg-[#faf9f7]">
       {/* MBC5 Feature - Scrollable Gallery */}
@@ -27,7 +45,11 @@ export function Press() {
 
           {/* Scrollable Gallery */}
           <div className="relative">
-            <div className="flex gap-4 lg:gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 lg:mx-0 lg:px-0 lg:justify-center">
+            <div 
+              ref={scrollRef}
+              className="flex gap-4 lg:gap-6 overflow-x-auto pb-4 snap-x snap-mandatory -mx-6 px-6 lg:mx-0 lg:px-0 lg:justify-center hide-scrollbar"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
               {mbc5Images.map((img, index) => (
                 <div 
                   key={index}
