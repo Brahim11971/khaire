@@ -100,9 +100,7 @@ export function Hero() {
                 DECOUVRIR LA PIECE
               </a>
               <a
-                href="https://www.tiktok.com/@belkhirchaimae/video/7481632230843848993"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#video"
                 className="inline-flex items-center gap-3 text-xs tracking-[0.1em] hover:text-white/80 transition-colors group"
               >
                 <span className="flex items-center justify-center w-11 h-11 rounded-full border border-white/50 group-hover:border-white transition-colors">

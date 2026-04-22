@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { TrustBadges } from "@/components/trust-badges"
 import { DetailGallery } from "@/components/detail-gallery"
+import { VideoSection } from "@/components/video-section"
 import { AboutSection } from "@/components/about-section"
 import { CtaBanner } from "@/components/cta-banner"
 import { Collections } from "@/components/collections"
@@ -20,6 +21,7 @@ export default function Home() {
         <Hero />
         <TrustBadges />
         <DetailGallery />
+        <VideoSection />
         <AboutSection />
         <CtaBanner />
         <Collections />
