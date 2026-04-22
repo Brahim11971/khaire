@@ -9,7 +9,7 @@ const navLinks = [
   { href: "#boutique", label: "BOUTIQUE" },
   { href: "#atelier", label: "L'ATELIER" },
   { href: "#collections", label: "COLLECTIONS" },
-  { href: "#journal", label: "JOURNAL" },
+  { href: "#fondatrice", label: "FONDATRICE" },
 ]
 
 export function Header() {
