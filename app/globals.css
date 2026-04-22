@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+/* Custom Canela Font */
+@font-face {
+  font-family: "Canela";
+  src: url("/assets/fonts/CanelaText-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Canela";
+  src: url("/assets/fonts/CanelaText-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Canela";
+  src: url("/assets/fonts/CanelaText-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Canela";
+  src: url("/assets/fonts/CanelaText-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme inline {
+  --font-sans: "Canela", Georgia, "Times New Roman", serif;
+  --font-serif: "Canela", Georgia, "Times New Roman", serif;
+  
+  /* Color palette based on design */
+  --color-background: #faf9f7;
+  --color-foreground: #1a1a1a;
+  --color-cream: #f5f1eb;
+  --color-cream-dark: #e8e2d9;
+  --color-forest: #3d5a45;
+  --color-forest-dark: #2d4535;
+  --color-gold: #c4a574;
+  --color-gold-light: #d4b584;
+  --color-muted: #6b6b6b;
+  --color-muted-foreground: #888888;
+  --color-border: #e5e0d8;
+  --color-card: #ffffff;
+  
+  /* Spacing */
+  --spacing-section: 5rem;
+  --spacing-section-lg: 7rem;
+  
+  /* Animation */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  
+  /* Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-forest);
+  color: white;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-forest);
+  outline-offset: 2px;
+}
+
+/* Scroll lock */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
