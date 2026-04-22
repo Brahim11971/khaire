@@ -99,11 +99,8 @@ export function DetailGallery() {
         <div className="text-center mt-10 lg:mt-12 pb-20 lg:pb-0">
           <button
             type="button"
-            onClick={() => {
-              console.log("[v0] Video button clicked, setting videoOpen to true")
-              setVideoOpen(true)
-            }}
-            className="relative z-10 inline-flex items-center gap-2 px-8 py-3.5 border border-[#1a1a1a] rounded-full text-xs tracking-[0.15em] hover:bg-[#1a1a1a] hover:text-white transition-colors"
+            onClick={() => setVideoOpen(true)}
+            className="cursor-pointer relative z-10 inline-flex items-center gap-2 px-8 py-3.5 border border-[#1a1a1a] rounded-full text-xs tracking-[0.15em] hover:bg-[#1a1a1a] hover:text-white transition-colors"
           >
             <Play size={14} />
             VOIR LA VIDEO
