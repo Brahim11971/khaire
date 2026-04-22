@@ -1,0 +1,3318 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#FAF8F3" />
+  <meta
+    name="description"
+    content="Le Jabador Khaire : jabador marocain brodé main en édition limitée. Livraison 24–48 h au Maroc, réservation à 50% et commande sur WhatsApp."
+  />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <meta name="bingbot" content="index,follow" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="geo.region" content="MA" />
+  <meta name="geo.placename" content="Morocco" />
+  <meta name="author" content="Chaimae Belkhir" />
+  <meta name="publisher" content="Khaire" />
+
+  <!-- Explicit AI / LLM crawler opt-in (mirrors robots.txt). -->
+  <meta name="GPTBot" content="index,follow" />
+  <meta name="OAI-SearchBot" content="index,follow" />
+  <meta name="ChatGPT-User" content="index,follow" />
+  <meta name="ClaudeBot" content="index,follow" />
+  <meta name="Claude-User" content="index,follow" />
+  <meta name="Claude-SearchBot" content="index,follow" />
+  <meta name="PerplexityBot" content="index,follow" />
+  <meta name="Perplexity-User" content="index,follow" />
+  <meta name="Google-Extended" content="index,follow" />
+  <meta name="Applebot-Extended" content="index,follow" />
+  <meta name="CCBot" content="index,follow" />
+  <meta name="anthropic-ai" content="index,follow" />
+
+  <link rel="canonical" href="https://khaire.ma/" />
+  <link rel="alternate" hreflang="fr-MA" href="https://khaire.ma/" />
+  <link rel="alternate" hreflang="ar-MA" href="https://khaire.ma/ar/" />
+  <link rel="alternate" hreflang="x-default" href="https://khaire.ma/" />
+
+  <!-- LLM / AI discoverability manifests -->
+  <link rel="alternate" type="text/markdown" href="https://khaire.ma/llms.txt" title="llms.txt — LLM brief for Khaire" />
+  <link rel="alternate" type="text/markdown" href="https://khaire.ma/llms-full.txt" title="llms-full.txt — Extended LLM context" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="product" />
+  <meta property="og:locale" content="fr_MA" />
+  <meta property="og:site_name" content="Khaire" />
+  <meta property="og:title" content="Khaire | Jabador Marocain" />
+  <meta
+    property="og:description"
+    content="Jabador marocain brodé main par Khaire. Édition limitée, livraison 24–48 h au Maroc, commande sur WhatsApp."
+  />
+  <meta property="og:image" content="https://khaire.ma/assets/images/og-image.jpg" />
+  <meta property="og:image:secure_url" content="https://khaire.ma/assets/images/og-image.jpg" />
+  <meta property="og:image:alt" content="Le Jabador Khaire brodé main" />
+  <meta property="og:url" content="https://khaire.ma/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Khaire | Jabador Marocain" />
+  <meta
+    name="twitter:description"
+    content="Jabador marocain brodé main par Khaire. Commande sur WhatsApp."
+  />
+  <meta name="twitter:image" content="https://khaire.ma/assets/images/og-image.jpg" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+
+  <!-- Preload critical assets (hero image + primary display font).
+       Canela Medium is the true heading weight (h1/h2 use font-weight: 500).
+       imagesrcset + type="image/webp" so modern browsers grab the
+       13KB webp, legacy browsers fall back to the 44KB jpg. -->
+  <link
+    rel="preload"
+    as="image"
+    href="assets/images/hero.jpg"
+    imagesrcset="assets/images/hero.webp"
+    type="image/webp"
+    fetchpriority="high"
+  />
+  <link
+    rel="preload"
+    as="font"
+    type="font/woff2"
+    href="assets/fonts/CanelaText-Medium.woff2"
+    crossorigin
+  />
+
+  <!-- Fonts:
+       - Canela (self-hosted, Basic Latin only) is declared in style.css
+       - Fraunces is the paired fallback for accented glyphs
+         (é, è, à, ê, ï, ô, ù, ç, etc.) that Canela trial does NOT ship.
+         Chosen over Cormorant Garamond because its x-height (~0.48) is
+         much closer to Canela's (0.506) — and style.css re-declares it
+         as "Canela Accent Fallback" with size-adjust/ascent overrides so
+         the accents render at Canela's exact visual size.
+       - Inter / Cairo / Amiri round out the UI + Arabic stacks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&family=Cairo:wght@400;600&family=Amiri:wght@400&display=swap"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>Khaire | Jabador Marocain</title>
+
+  <!-- Speculation Rules — prerender the Arabic mirror and the founder
+       profile on moderate interaction, so navigation between canonical
+       pages is instant. Browsers without the API silently ignore this. -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "source": "list",
+        "urls": ["/ar/", "/chaimae-belkhir/"],
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured data: organization, founder, product variants, FAQ -->
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://khaire.ma/#organization",
+        "name": "Khaire",
+        "url": "https://khaire.ma/",
+        "logo": "https://khaire.ma/assets/images/logo.png",
+        "image": "https://khaire.ma/assets/images/og-image.jpg",
+        "sameAs": [
+          "https://www.instagram.com/khairedesigns/",
+          "https://www.tiktok.com/@khairedesigns"
+        ],
+        "founder": {
+          "@id": "https://khaire.ma/#chaimae-belkhir"
+        },
+        "knowsAbout": [
+          "Jabador marocain",
+          "Caftan marocain",
+          "Kaftan marocain",
+          "Takchita",
+          "Tenue d'Aïd",
+          "Vêtement traditionnel marocain",
+          "Broderie artisanale marocaine"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+212666642255",
+          "areaServed": "MA",
+          "availableLanguage": [
+            "French",
+            "Arabic"
+          ]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://khaire.ma/#chaimae-belkhir",
+        "name": "Chaimae Belkhir",
+        "givenName": "Chaimae",
+        "familyName": "Belkhir",
+        "alternateName": [
+          "شيماء بلخير",
+          "Chaymae Belkhir",
+          "Chaima Belkhir",
+          "Belkhir Chaimae"
+        ],
+        "description": "Chaimae Belkhir est une créatrice marocaine et créatrice de contenu, fondatrice et directrice créative de Khaire, maison de créations marocaines traditionnelles (jabador, caftan, kaftan, takchita, tenues d'Aïd) brodées main.",
+        "jobTitle": "Fondatrice et directrice créative",
+        "gender": "https://schema.org/Female",
+        "nationality": { "@type": "Country", "name": "Morocco" },
+        "homeLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "MA",
+            "addressRegion": "Rabat-Salé-Kénitra"
+          }
+        },
+        "worksFor": { "@id": "https://khaire.ma/#organization" },
+        "founderOf": { "@id": "https://khaire.ma/#organization" },
+        "brand": { "@id": "https://khaire.ma/#organization" },
+        "knowsLanguage": [
+          { "@type": "Language", "name": "Arabic", "alternateName": "ar" },
+          { "@type": "Language", "name": "French", "alternateName": "fr" },
+          { "@type": "Language", "name": "English", "alternateName": "en" }
+        ],
+        "knowsAbout": [
+          "Mode marocaine",
+          "Créations Khaire",
+          "Jabador marocain",
+          "Caftan marocain",
+          "Kaftan marocain",
+          "Takchita",
+          "Tenue d'Aïd",
+          "Vêtement traditionnel marocain",
+          "Broderie artisanale marocaine",
+          "Direction créative",
+          "Création de contenu"
+        ],
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://khaire.ma/assets/images/og-image.jpg",
+          "caption": "Chaimae Belkhir, fondatrice de Khaire"
+        },
+        "mainEntityOfPage": { "@id": "https://khaire.ma/chaimae-belkhir/#profilepage" },
+        "url": "https://khaire.ma/chaimae-belkhir/",
+        "sameAs": [
+          "https://www.instagram.com/belkhirchaimae/",
+          "https://www.tiktok.com/@chaimae.belkhir",
+          "https://www.facebook.com/belkhirchaimae/",
+          "https://www.threads.com/@belkhirchaimae",
+          "https://www.snapchat.com/@chaimaebelkhir",
+          "https://www.pinterest.com/belkhirchaimae/",
+          "https://www.linkedin.com/in/chaimae-belkhir-825383268/",
+          "https://www.instagram.com/khairedesigns/",
+          "https://www.tiktok.com/@khairedesigns"
+        ],
+        "identifier": [
+          { "@type": "PropertyValue", "propertyID": "instagram-handle", "value": "@belkhirchaimae" },
+          { "@type": "PropertyValue", "propertyID": "tiktok-handle", "value": "@chaimae.belkhir" }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://khaire.ma/#website",
+        "url": "https://khaire.ma/",
+        "name": "Khaire",
+        "publisher": {
+          "@id": "https://khaire.ma/#organization"
+        },
+        "inLanguage": [
+          "fr-MA",
+          "ar-MA"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://khaire.ma/#webpage",
+        "url": "https://khaire.ma/",
+        "name": "Khaire | Jabador Marocain",
+        "description": "Le Jabador Khaire : jabador marocain brodé main en édition limitée, livraison au Maroc et commande sur WhatsApp.",
+        "isPartOf": {
+          "@id": "https://khaire.ma/#website"
+        },
+        "about": [
+          {
+            "@id": "https://khaire.ma/#product-group"
+          }
+        ],
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://khaire.ma/assets/images/og-image.jpg"
+        },
+        "inLanguage": "fr-MA",
+        "breadcrumb": {
+          "@id": "https://khaire.ma/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://khaire.ma/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "https://khaire.ma/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Le Jabador Khaire",
+            "item": "https://khaire.ma/#top"
+          }
+        ]
+      },
+      {
+        "@type": "ProductGroup",
+        "@id": "https://khaire.ma/#product-group",
+        "name": "Le Jabador Khaire",
+        "productGroupID": "KHV-JABADOR",
+        "brand": {
+          "@id": "https://khaire.ma/#organization"
+        },
+        "url": "https://khaire.ma/",
+        "image": [
+          "https://khaire.ma/assets/images/hero.jpg",
+          "https://khaire.ma/assets/images/gallery-1.jpg",
+          "https://khaire.ma/assets/images/gallery-2.jpg",
+          "https://khaire.ma/assets/images/gallery-3.jpg",
+          "https://khaire.ma/assets/images/gallery-4.jpg"
+        ],
+        "description": "Jabador marocain traditionnel entièrement brodé à la main par Khaire. Édition limitée, livraison 24 à 48 h partout au Maroc.",
+        "category": "Jabador marocain",
+        "material": [
+          "Tissu haut de gamme",
+          "Broderie artisanale",
+          "Boutons tressés"
+        ],
+        "audience": {
+          "@type": "PeopleAudience",
+          "suggestedGender": "Female"
+        },
+        "variesBy": [
+          "https://schema.org/color",
+          "https://schema.org/size"
+        ],
+        "hasVariant": [
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv01t1",
+            "name": "Le Jabador Khaire - Coloris 01 - Taille 1",
+            "sku": "KHV01T1",
+            "image": "https://khaire.ma/assets/images/hero.jpg",
+            "description": "Variante coloris 01 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 01",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv01",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv01t2",
+            "name": "Le Jabador Khaire - Coloris 01 - Taille 2",
+            "sku": "KHV01T2",
+            "image": "https://khaire.ma/assets/images/hero.jpg",
+            "description": "Variante coloris 01 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 01",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv01",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv02t1",
+            "name": "Le Jabador Khaire - Coloris 02 - Taille 1",
+            "sku": "KHV02T1",
+            "image": "https://khaire.ma/assets/images/gallery-1.jpg",
+            "description": "Variante coloris 02 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 02",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv02",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv02t2",
+            "name": "Le Jabador Khaire - Coloris 02 - Taille 2",
+            "sku": "KHV02T2",
+            "image": "https://khaire.ma/assets/images/gallery-1.jpg",
+            "description": "Variante coloris 02 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 02",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv02",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv03t1",
+            "name": "Le Jabador Khaire - Coloris 03 - Taille 1",
+            "sku": "KHV03T1",
+            "image": "https://khaire.ma/assets/images/gallery-2.jpg",
+            "description": "Variante coloris 03 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 03",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv03",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv03t2",
+            "name": "Le Jabador Khaire - Coloris 03 - Taille 2",
+            "sku": "KHV03T2",
+            "image": "https://khaire.ma/assets/images/gallery-2.jpg",
+            "description": "Variante coloris 03 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 03",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv03",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv04t1",
+            "name": "Le Jabador Khaire - Coloris 04 - Taille 1",
+            "sku": "KHV04T1",
+            "image": "https://khaire.ma/assets/images/gallery-3.jpg",
+            "description": "Variante coloris 04 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 04",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv04",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv04t2",
+            "name": "Le Jabador Khaire - Coloris 04 - Taille 2",
+            "sku": "KHV04T2",
+            "image": "https://khaire.ma/assets/images/gallery-3.jpg",
+            "description": "Variante coloris 04 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 04",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv04",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv05t1",
+            "name": "Le Jabador Khaire - Coloris 05 - Taille 1",
+            "sku": "KHV05T1",
+            "image": "https://khaire.ma/assets/images/gallery-4.jpg",
+            "description": "Variante coloris 05 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 05",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv05",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv05t2",
+            "name": "Le Jabador Khaire - Coloris 05 - Taille 2",
+            "sku": "KHV05T2",
+            "image": "https://khaire.ma/assets/images/gallery-4.jpg",
+            "description": "Variante coloris 05 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 05",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv05",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv06t1",
+            "name": "Le Jabador Khaire - Coloris 06 - Taille 1",
+            "sku": "KHV06T1",
+            "image": "https://khaire.ma/assets/images/hero.jpg",
+            "description": "Variante coloris 06 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 06",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv06",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv06t2",
+            "name": "Le Jabador Khaire - Coloris 06 - Taille 2",
+            "sku": "KHV06T2",
+            "image": "https://khaire.ma/assets/images/hero.jpg",
+            "description": "Variante coloris 06 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 06",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv06",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv07t1",
+            "name": "Le Jabador Khaire - Coloris 07 - Taille 1",
+            "sku": "KHV07T1",
+            "image": "https://khaire.ma/assets/images/gallery-1.jpg",
+            "description": "Variante coloris 07 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 07",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv07",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv07t2",
+            "name": "Le Jabador Khaire - Coloris 07 - Taille 2",
+            "sku": "KHV07T2",
+            "image": "https://khaire.ma/assets/images/gallery-1.jpg",
+            "description": "Variante coloris 07 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 07",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv07",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv08t1",
+            "name": "Le Jabador Khaire - Coloris 08 - Taille 1",
+            "sku": "KHV08T1",
+            "image": "https://khaire.ma/assets/images/gallery-2.jpg",
+            "description": "Variante coloris 08 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 08",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv08",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv08t2",
+            "name": "Le Jabador Khaire - Coloris 08 - Taille 2",
+            "sku": "KHV08T2",
+            "image": "https://khaire.ma/assets/images/gallery-2.jpg",
+            "description": "Variante coloris 08 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 08",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv08",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv09t1",
+            "name": "Le Jabador Khaire - Coloris 09 - Taille 1",
+            "sku": "KHV09T1",
+            "image": "https://khaire.ma/assets/images/gallery-3.jpg",
+            "description": "Variante coloris 09 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 09",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv09",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv09t2",
+            "name": "Le Jabador Khaire - Coloris 09 - Taille 2",
+            "sku": "KHV09T2",
+            "image": "https://khaire.ma/assets/images/gallery-3.jpg",
+            "description": "Variante coloris 09 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 09",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv09",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv10t1",
+            "name": "Le Jabador Khaire - Coloris 10 - Taille 1",
+            "sku": "KHV10T1",
+            "image": "https://khaire.ma/assets/images/gallery-4.jpg",
+            "description": "Variante coloris 10 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 10",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv10",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv10t2",
+            "name": "Le Jabador Khaire - Coloris 10 - Taille 2",
+            "sku": "KHV10T2",
+            "image": "https://khaire.ma/assets/images/gallery-4.jpg",
+            "description": "Variante coloris 10 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 10",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv10",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv11t1",
+            "name": "Le Jabador Khaire - Coloris 11 - Taille 1",
+            "sku": "KHV11T1",
+            "image": "https://khaire.ma/assets/images/hero.jpg",
+            "description": "Variante coloris 11 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 11",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv11",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv11t2",
+            "name": "Le Jabador Khaire - Coloris 11 - Taille 2",
+            "sku": "KHV11T2",
+            "image": "https://khaire.ma/assets/images/hero.jpg",
+            "description": "Variante coloris 11 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 11",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv11",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv12t1",
+            "name": "Le Jabador Khaire - Coloris 12 - Taille 1",
+            "sku": "KHV12T1",
+            "image": "https://khaire.ma/assets/images/gallery-1.jpg",
+            "description": "Variante coloris 12 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 12",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv12",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv12t2",
+            "name": "Le Jabador Khaire - Coloris 12 - Taille 2",
+            "sku": "KHV12T2",
+            "image": "https://khaire.ma/assets/images/gallery-1.jpg",
+            "description": "Variante coloris 12 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 12",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv12",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv13t1",
+            "name": "Le Jabador Khaire - Coloris 13 - Taille 1",
+            "sku": "KHV13T1",
+            "image": "https://khaire.ma/assets/images/gallery-2.jpg",
+            "description": "Variante coloris 13 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 13",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv13",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv13t2",
+            "name": "Le Jabador Khaire - Coloris 13 - Taille 2",
+            "sku": "KHV13T2",
+            "image": "https://khaire.ma/assets/images/gallery-2.jpg",
+            "description": "Variante coloris 13 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 13",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv13",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv14t1",
+            "name": "Le Jabador Khaire - Coloris 14 - Taille 1",
+            "sku": "KHV14T1",
+            "image": "https://khaire.ma/assets/images/gallery-3.jpg",
+            "description": "Variante coloris 14 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 14",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv14",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv14t2",
+            "name": "Le Jabador Khaire - Coloris 14 - Taille 2",
+            "sku": "KHV14T2",
+            "image": "https://khaire.ma/assets/images/gallery-3.jpg",
+            "description": "Variante coloris 14 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 14",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv14",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv15t1",
+            "name": "Le Jabador Khaire - Coloris 15 - Taille 1",
+            "sku": "KHV15T1",
+            "image": "https://khaire.ma/assets/images/gallery-4.jpg",
+            "description": "Variante coloris 15 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 15",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv15",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv15t2",
+            "name": "Le Jabador Khaire - Coloris 15 - Taille 2",
+            "sku": "KHV15T2",
+            "image": "https://khaire.ma/assets/images/gallery-4.jpg",
+            "description": "Variante coloris 15 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 15",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv15",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv16t1",
+            "name": "Le Jabador Khaire - Coloris 16 - Taille 1",
+            "sku": "KHV16T1",
+            "image": "https://khaire.ma/assets/images/hero.jpg",
+            "description": "Variante coloris 16 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 16",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv16",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv16t2",
+            "name": "Le Jabador Khaire - Coloris 16 - Taille 2",
+            "sku": "KHV16T2",
+            "image": "https://khaire.ma/assets/images/hero.jpg",
+            "description": "Variante coloris 16 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 16",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv16",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv17t1",
+            "name": "Le Jabador Khaire - Coloris 17 - Taille 1",
+            "sku": "KHV17T1",
+            "image": "https://khaire.ma/assets/images/gallery-1.jpg",
+            "description": "Variante coloris 17 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 17",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv17",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv17t2",
+            "name": "Le Jabador Khaire - Coloris 17 - Taille 2",
+            "sku": "KHV17T2",
+            "image": "https://khaire.ma/assets/images/gallery-1.jpg",
+            "description": "Variante coloris 17 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 17",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv17",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv18t1",
+            "name": "Le Jabador Khaire - Coloris 18 - Taille 1",
+            "sku": "KHV18T1",
+            "image": "https://khaire.ma/assets/images/gallery-2.jpg",
+            "description": "Variante coloris 18 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 18",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv18",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv18t2",
+            "name": "Le Jabador Khaire - Coloris 18 - Taille 2",
+            "sku": "KHV18T2",
+            "image": "https://khaire.ma/assets/images/gallery-2.jpg",
+            "description": "Variante coloris 18 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 18",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv18",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv19t1",
+            "name": "Le Jabador Khaire - Coloris 19 - Taille 1",
+            "sku": "KHV19T1",
+            "image": "https://khaire.ma/assets/images/gallery-3.jpg",
+            "description": "Variante coloris 19 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 19",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv19",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv19t2",
+            "name": "Le Jabador Khaire - Coloris 19 - Taille 2",
+            "sku": "KHV19T2",
+            "image": "https://khaire.ma/assets/images/gallery-3.jpg",
+            "description": "Variante coloris 19 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 19",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv19",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv20t1",
+            "name": "Le Jabador Khaire - Coloris 20 - Taille 1",
+            "sku": "KHV20T1",
+            "image": "https://khaire.ma/assets/images/gallery-4.jpg",
+            "description": "Variante coloris 20 du Jabador Khaire, brodé main. Taille 1 (S/M).",
+            "color": "Coloris 20",
+            "size": "Taille 1 (S/M)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv20",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "@type": "Product",
+            "@id": "https://khaire.ma/#product-khv20t2",
+            "name": "Le Jabador Khaire - Coloris 20 - Taille 2",
+            "sku": "KHV20T2",
+            "image": "https://khaire.ma/assets/images/gallery-4.jpg",
+            "description": "Variante coloris 20 du Jabador Khaire, brodé main. Taille 2 (L/XL).",
+            "color": "Coloris 20",
+            "size": "Taille 2 (L/XL)",
+            "category": "Jabador marocain",
+            "material": [
+              "Tissu haut de gamme",
+              "Broderie artisanale",
+              "Boutons tressés"
+            ],
+            "isVariantOf": {
+              "@id": "https://khaire.ma/#product-group"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "MAD",
+              "price": "1199",
+              "availability": "https://schema.org/LimitedAvailability",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://khaire.ma/#variant=khv20",
+              "paymentAccepted": [
+                "Bank transfer",
+                "Wafacash",
+                "CashPlus",
+                "Cash on delivery"
+              ],
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "MA"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://khaire.ma/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Est-il disponible en stock actuellement ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nos pièces sont fabriquées en très petites quantités et partent vite. Pour confirmer la disponibilité de votre taille et coloris, écrivez-nous sur WhatsApp ; nous répondons en 5 minutes ou moins."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Combien de temps pour la livraison ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "24 à 48 heures partout au Maroc. Nous expédions le jour même quand la commande est confirmée avant 16 h."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment se passe le paiement ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un acompte de 50% est demandé à la commande pour réserver votre pièce. Le solde est réglé à la livraison. Les modalités de paiement de l'acompte sont partagées sur WhatsApp : virement, Wafacash ou CashPlus."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Puis-je échanger la pièce si elle ne convient pas ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. Échange possible dans les 24 heures suivant la réception, à condition que la pièce n'ait pas été portée et qu'elle soit retournée dans son emballage d'origine."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "En combien de temps répondez-vous sur WhatsApp ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "5 minutes ou moins, aux heures d'ouverture de notre atelier."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment je commande via WhatsApp ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cliquez sur un bouton WhatsApp et envoyez le message pré-rempli. Notre styliste confirme la disponibilité, vous aide à choisir la taille et le coloris, organise l'acompte et la livraison."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===================================================================
+    ANALYTICS — TODO: uncomment and add your real IDs before launch.
+    CTA clicks are already wired in app.js (see initCTATracking) and
+    will call window.fbq / window.gtag if present.
+  ===================================================================
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+      s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+      (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  -->
+</head>
+
+<body>
+  <!-- Announcement bar -->
+  <div class="announce" role="region" aria-label="Promotions">
+    <p data-i18n="announce">Édition très limitée · Livraison 24–48 h · Réservation à 50%</p>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="site-header__wrap">
+      <a
+        href="./ar/"
+        class="lang-toggle"
+        aria-label="Changer la langue"
+        data-lang-target="ar"
+      >
+        <span class="lang-toggle__label">العربية</span>
+      </a>
+
+      <a href="#top" class="brand" aria-label="Khaire">
+        <img src="assets/images/logo-wordmark.png" alt="Khaire" width="553" height="120" fetchpriority="high" />
+      </a>
+
+      <a
+        class="header-whatsapp"
+        href="https://wa.me/212666642255?text=Bonjour%20Khaire%2C%20j%27aurais%20une%20question%20sur%20Le%20Jabador%20Khaire."
+        aria-label="WhatsApp"
+        target="_blank"
+        rel="noopener"
+        data-cta
+        data-cta-intent="inquiry"
+        data-cta-placement="header"
+      >
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <path fill="currentColor" d="M12.04 2.003c-5.52 0-9.996 4.476-9.996 9.997 0 1.76.46 3.483 1.336 5.003l-1.419 5.183 5.315-1.394a9.98 9.98 0 0 0 4.764 1.212h.004c5.52 0 9.997-4.476 9.997-9.997 0-2.672-1.04-5.182-2.929-7.07a9.93 9.93 0 0 0-7.072-2.934Zm0 18.19h-.003a8.29 8.29 0 0 1-4.225-1.157l-.303-.18-3.154.827.841-3.074-.197-.316a8.27 8.27 0 0 1-1.267-4.393c0-4.58 3.728-8.308 8.311-8.308 2.22 0 4.305.866 5.874 2.436a8.25 8.25 0 0 1 2.432 5.876c0 4.58-3.727 8.289-8.309 8.289Zm4.55-6.215c-.25-.124-1.475-.728-1.704-.81-.228-.084-.395-.125-.562.125-.167.25-.645.81-.79.977-.146.167-.292.188-.541.062-.25-.125-1.055-.389-2.01-1.24-.743-.663-1.244-1.481-1.39-1.73-.146-.25-.016-.385.109-.51.112-.111.25-.292.375-.437.125-.146.167-.25.25-.417.083-.167.042-.312-.021-.437-.062-.125-.562-1.357-.77-1.857-.203-.488-.41-.422-.562-.43-.146-.007-.312-.009-.479-.009a.918.918 0 0 0-.667.312c-.229.25-.875.855-.875 2.086s.896 2.42 1.02 2.586c.125.167 1.762 2.69 4.27 3.772.596.257 1.061.41 1.423.525.598.19 1.142.163 1.572.099.48-.072 1.475-.602 1.683-1.184.208-.583.208-1.082.146-1.184-.062-.104-.229-.167-.479-.292Z"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- =================================================================
+        HERO — product image + key info + primary CTA (order intent)
+    ================================================================= -->
+    <section class="hero" aria-label="Produit">
+      <!-- Hero frame: matted picture + thumbnail rail at the bottom.
+           Tap picture  → opens full-screen lightbox scroller.
+           Tap thumbnail → cross-fades the hero to that variant.
+           The rail and its scroll-snap behavior are owned by CSS;
+           app.js only renders the buttons and manages active state. -->
+      <div class="hero__media">
+        <span class="hero__corner hero__corner--tl" aria-hidden="true"></span>
+        <span class="hero__corner hero__corner--tr" aria-hidden="true"></span>
+        <span class="hero__corner hero__corner--bl" aria-hidden="true"></span>
+        <span class="hero__corner hero__corner--br" aria-hidden="true"></span>
+        <button
+          type="button"
+          class="hero__picture"
+          data-hero-open-lightbox
+          data-i18n-aria-label="hero_open_lightbox"
+          aria-label="Agrandir l'image"
+        >
+          <picture>
+            <source srcset="assets/images/hero.webp" type="image/webp" data-hero-source />
+            <img
+              src="assets/images/hero.jpg"
+              alt="Le Jabador Khaire porté"
+              width="1200"
+              height="1500"
+              fetchpriority="high"
+              data-hero-img
+            />
+          </picture>
+          <span class="hero__zoom" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18">
+              <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M11 3a8 8 0 1 0 5.3 14L21 21M11 7v8M7 11h8"/>
+            </svg>
+          </span>
+        </button>
+        <div
+          class="hero__thumbs"
+          role="tablist"
+          data-i18n-aria-label="hero_thumbs_label"
+          aria-label="Autres pièces"
+          data-hero-thumbs
+        ></div>
+      </div>
+
+      <div class="hero__info">
+        <p class="eyebrow eyebrow--ornament" data-i18n="eyebrow">Édition très limitée</p>
+        <h1 class="product-name" data-i18n="product_name">Le Jabador Khaire</h1>
+
+        <p class="availability" aria-live="polite">
+          <span class="availability__dot" aria-hidden="true"></span>
+          <span data-i18n="availability">Atelier ouvert · réponse en ~5 min</span>
+        </p>
+
+        <p class="price price--editorial">
+          <span class="price__amount" data-i18n="price_amount">1199</span>
+          <span class="price__currency" data-i18n="price_currency">dh</span>
+          <span class="price__note" data-i18n="price_note">Acompte 50% · Solde à la livraison</span>
+        </p>
+
+        <div class="color-note" role="note">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M12 2a10 10 0 1 0 10 10c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1Z"/>
+          </svg>
+          <p data-i18n="color_note">Plusieurs coloris disponibles. Notre styliste vous aide à choisir le vôtre sur WhatsApp.</p>
+        </div>
+
+        <div class="size-selector" role="radiogroup" aria-label="Taille">
+          <span class="size-selector__label" data-i18n="size_label">Taille</span>
+          <div class="size-selector__options">
+            <button type="button" class="size-btn is-active" role="radio" aria-checked="true" tabindex="0" data-size="S/M">S / M</button>
+            <button type="button" class="size-btn" role="radio" aria-checked="false" tabindex="-1" data-size="L/XL">L / XL</button>
+          </div>
+          <a href="#size-guide" class="size-guide-link" data-i18n="size_guide">Guide des tailles</a>
+        </div>
+
+        <a
+          href="https://wa.me/212666642255?text=Bonjour%20Khaire%2C%20je%20souhaite%20commander%20Le%20Jabador%20Khaire%20%E2%80%94%20pouvez-vous%20confirmer%20la%20disponibilit%C3%A9%20%3F"
+          class="btn btn--primary whatsapp-cta"
+          data-cta
+          data-cta-intent="order"
+          data-cta-placement="hero"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path fill="currentColor" d="M12.04 2.003c-5.52 0-9.996 4.476-9.996 9.997 0 1.76.46 3.483 1.336 5.003l-1.419 5.183 5.315-1.394a9.98 9.98 0 0 0 4.764 1.212h.004c5.52 0 9.997-4.476 9.997-9.997 0-2.672-1.04-5.182-2.929-7.07a9.93 9.93 0 0 0-7.072-2.934Zm4.55 14.175c-.25-.124-1.475-.728-1.704-.81-.228-.084-.395-.125-.562.125-.167.25-.645.81-.79.977-.146.167-.292.188-.541.062-.25-.125-1.055-.389-2.01-1.24-.743-.663-1.244-1.481-1.39-1.73-.146-.25-.016-.385.109-.51.112-.111.25-.292.375-.437.125-.146.167-.25.25-.417.083-.167.042-.312-.021-.437-.062-.125-.562-1.357-.77-1.857-.203-.488-.41-.422-.562-.43-.146-.007-.312-.009-.479-.009a.918.918 0 0 0-.667.312c-.229.25-.875.855-.875 2.086s.896 2.42 1.02 2.586c.125.167 1.762 2.69 4.27 3.772.596.257 1.061.41 1.423.525.598.19 1.142.163 1.572.099.48-.072 1.475-.602 1.683-1.184.208-.583.208-1.082.146-1.184-.062-.104-.229-.167-.479-.292Z"/>
+          </svg>
+          <span data-i18n="cta">Commander sur WhatsApp</span>
+        </a>
+
+        <!-- Quick at-a-glance reassurance inside the hero -->
+        <ul class="trust-row" aria-label="Garanties rapides">
+          <li>
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M3 7h11v9H3zM14 10h4l3 3v3h-7zM7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm10 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
+            <span data-i18n="trust_1">Livraison 24–48 h au Maroc</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M4 7h16v10H4zM8 12h8M12 10v4"/></svg>
+            <span data-i18n="trust_2">Acompte 50% · Solde livré</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 2M12 3a9 9 0 1 0 9 9"/></svg>
+            <span data-i18n="trust_3">Réponse en 5 min</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =================================================================
+        TRUST STRIP — 6 micro-blocks answering the core operational
+        questions the brief requires ON-SITE (so chat can focus on closing).
+    ================================================================= -->
+    <section class="trust-strip" aria-label="Informations essentielles">
+      <ul class="trust-strip__grid">
+        <li class="trust-card">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M3 7h11v9H3zM14 10h4l3 3v3h-7zM7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm10 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
+          <div>
+            <p class="trust-card__title" data-i18n="trust_delivery_title">Livraison</p>
+            <p class="trust-card__body" data-i18n="trust_delivery_body">24 à 48 h partout au Maroc</p>
+          </div>
+        </li>
+        <li class="trust-card">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M4 7h16v10H4zM4 11h16M8 15h3"/></svg>
+          <div>
+            <p class="trust-card__title" data-i18n="trust_payment_title">Paiement</p>
+            <p class="trust-card__body" data-i18n="trust_payment_body">50% à la commande, solde à la livraison</p>
+          </div>
+        </li>
+        <li class="trust-card">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 2M12 3a9 9 0 1 0 9 9"/></svg>
+          <div>
+            <p class="trust-card__title" data-i18n="trust_reply_title">Réponse WhatsApp</p>
+            <p class="trust-card__body" data-i18n="trust_reply_body">En 5 minutes ou moins</p>
+          </div>
+        </li>
+        <li class="trust-card">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="m4 8 4-4 4 4M8 4v12M20 16l-4 4-4-4m4 4V8"/></svg>
+          <div>
+            <p class="trust-card__title" data-i18n="trust_exchange_title">Échange</p>
+            <p class="trust-card__body" data-i18n="trust_exchange_body">Sous 24 h, non porté, emballage d'origine</p>
+          </div>
+        </li>
+        <li class="trust-card">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M12 2 9 9l-7 1 5 5-1 7 6-3 6 3-1-7 5-5-7-1Z"/></svg>
+          <div>
+            <p class="trust-card__title" data-i18n="trust_limited_title">Édition</p>
+            <p class="trust-card__body" data-i18n="trust_limited_body">Pièces extrêmement limitées</p>
+          </div>
+        </li>
+        <li class="trust-card">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M6 12a6 6 0 0 1 12 0c0 3-2 5-3 6H9c-1-1-3-3-3-6Zm3 8h6M10 22h4"/></svg>
+          <div>
+            <p class="trust-card__title" data-i18n="trust_handmade_title">Fait main</p>
+            <p class="trust-card__body" data-i18n="trust_handmade_body">Broderie artisanale, pièce unique</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- =================================================================
+        SOCIAL PROOF SNAPSHOT — press/founder signal near the top.
+    ================================================================= -->
+    <section class="social-proof" aria-label="Avis client">
+      <img
+        class="social-proof__event-photo"
+        src="assets/images/mbc5-event.jpg"
+        alt=""
+        width="1920"
+        height="1080"
+        loading="lazy"
+        aria-hidden="true"
+      />
+      <div class="social-proof__wrap">
+        <a
+          class="social-proof__logo"
+          href="https://commons.wikimedia.org/wiki/File:MBC_5_TV_Channel_Logo.png"
+          target="_blank"
+          rel="noopener"
+          aria-label="MBC5"
+          title="MBC5 logo, MBC Group via Wikimedia Commons, CC BY-SA 4.0"
+        >
+          <img src="assets/images/mbc5-logo.png" alt="MBC5" width="62" height="99" loading="lazy" />
+        </a>
+        <p class="social-proof__quote" data-i18n="social_proof_quote">Vu sur MBC5 : Chaimae Belkhir présente l'univers Khaire, le jabador marocain et le travail artisanal derrière chaque pièce.</p>
+        <p class="social-proof__attribution" data-i18n="social_proof_attribution">Chaimae Belkhir, fondatrice et directrice créative</p>
+        <p class="social-proof__count badge badge--sand" data-i18n="social_proof_count">Presse · MBC5</p>
+      </div>
+    </section>
+
+    <!-- =================================================================
+        DETAIL GALLERY — close-up shots (front, back, model, fabric) of
+        the flagship variant. Tap any tile → opens the lightbox scroller
+        starting at that index. Images come from DETAILS in app.js.
+    ================================================================= -->
+    <section class="detail-gallery" aria-label="Détails de la pièce">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="gallery_eyebrow">Détails</p>
+        <h2 data-i18n="gallery_title">Voir la pièce de près</h2>
+      </div>
+      <div class="detail-gallery__grid" data-detail-grid></div>
+    </section>
+
+    <!-- =================================================================
+        CTA BANNER (inquiry) — after the gallery, before benefits
+    ================================================================= -->
+    <section class="cta-banner" aria-label="Vérifier la disponibilité">
+      <div class="cta-banner__wrap">
+        <p class="cta-banner__text" data-i18n="cta_inquiry_text">Des questions sur la disponibilité ou les coloris ?</p>
+        <a
+          href="https://wa.me/212666642255?text=Bonjour%20Khaire%2C%20j%27aurais%20une%20question%20sur%20Le%20Jabador%20Khaire."
+          class="btn btn--primary whatsapp-cta"
+          data-cta
+          data-cta-intent="inquiry"
+          data-cta-placement="after_gallery"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path fill="currentColor" d="M12.04 2.003c-5.52 0-9.996 4.476-9.996 9.997 0 1.76.46 3.483 1.336 5.003l-1.419 5.183 5.315-1.394a9.98 9.98 0 0 0 4.764 1.212h.004c5.52 0 9.997-4.476 9.997-9.997 0-2.672-1.04-5.182-2.929-7.07a9.93 9.93 0 0 0-7.072-2.934Z"/>
+          </svg>
+          <span data-i18n="cta_inquiry_button">Vérifier la disponibilité</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- =================================================================
+        VERTICAL VIDEO — 9:16 editorial product motion block.
+        Replace assets/videos/jabador-vertical.mp4 with the real reel.
+    ================================================================= -->
+    <section class="vertical-video" aria-label="Vidéo produit">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="video_eyebrow">En mouvement</p>
+        <h2 data-i18n="video_title">Le tombé, la lumière, les finitions</h2>
+      </div>
+      <div class="vertical-video__wrap">
+        <figure class="vertical-video__frame">
+          <video
+            controls
+            playsinline
+            preload="metadata"
+            poster="assets/images/hero.jpg"
+            aria-label="Vidéo verticale du Jabador Khaire"
+          >
+            <source src="assets/videos/jabador-vertical.mp4" type="video/mp4" />
+          </video>
+          <figcaption data-i18n="video_caption">Une vidéo verticale pour voir le jabador en mouvement.</figcaption>
+        </figure>
+        <div class="vertical-video__notes" aria-label="Ce que montre la vidéo">
+          <p class="vertical-video__kicker" data-i18n="video_kicker">À regarder avant de choisir</p>
+          <ul>
+            <li>
+              <span data-i18n="video_note_1_title">Coupe</span>
+              <p data-i18n="video_note_1_body">Le tombé sur le corps et l'allure générale.</p>
+            </li>
+            <li>
+              <span data-i18n="video_note_2_title">Broderie</span>
+              <p data-i18n="video_note_2_body">Les détails main, les boutons et les reflets du fil.</p>
+            </li>
+            <li>
+              <span data-i18n="video_note_3_title">Coloris</span>
+              <p data-i18n="video_note_3_body">La teinte réelle selon la lumière.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+        BENEFITS — 5 "why people buy it" blocks
+    ================================================================= -->
+    <section class="benefits" aria-label="Pourquoi Khaire">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="benefits_eyebrow">Pourquoi Khaire</p>
+        <h2 data-i18n="benefits_title">Ce qui rend cette pièce rare</h2>
+      </div>
+      <ul class="benefits__grid">
+        <li class="benefit">
+          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M4 4h4v16H4zM10 4h4v16h-4zM16 4h4v16h-4z"/></svg>
+          <div>
+            <h3 data-i18n="benefit_1_title">Brodé à la main</h3>
+            <p data-i18n="benefit_1_body">Chaque pièce demande plusieurs semaines de travail. Aucune machine, aucun raccourci.</p>
+          </div>
+        </li>
+        <li class="benefit">
+          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M12 2 3 8v8l9 6 9-6V8l-9-6Zm0 4v4m0 2v4"/></svg>
+          <div>
+            <h3 data-i18n="benefit_2_title">Matières précieuses</h3>
+            <p data-i18n="benefit_2_body">Tissus haut de gamme, fils fins et boutons tressés. Le détail qui dure.</p>
+          </div>
+        </li>
+        <li class="benefit">
+          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M12 2 9 9l-7 1 5 5-1 7 6-3 6 3-1-7 5-5-7-1Z"/></svg>
+          <div>
+            <h3 data-i18n="benefit_3_title">Extrêmement limité</h3>
+            <p data-i18n="benefit_3_body">Petites séries. Quand une pièce est partie, elle ne revient pas.</p>
+          </div>
+        </li>
+        <li class="benefit">
+          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M4 7h16v10H4zM4 11h16M20 12a3 3 0 0 1-3 3"/></svg>
+          <div>
+            <h3 data-i18n="benefit_4_title">Réservation simple et sûre</h3>
+            <p data-i18n="benefit_4_body">Un acompte de 50% réserve votre pièce à la commande. Le solde est réglé à la livraison, partout au Maroc.</p>
+          </div>
+        </li>
+        <li class="benefit">
+          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M21 12c0 4.97-4.03 9-9 9a9.5 9.5 0 0 1-4.2-.97L3 21l1.02-4.58A9 9 0 1 1 21 12Z"/></svg>
+          <div>
+            <h3 data-i18n="benefit_5_title">Conseil personnel</h3>
+            <p data-i18n="benefit_5_body">Notre styliste vous guide sur WhatsApp en quelques minutes : taille, coloris, coupe.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- =================================================================
+        CTA BANNER (order) — after benefits, before story
+    ================================================================= -->
+    <section class="cta-banner cta-banner--warm" aria-label="Commander">
+      <div class="cta-banner__wrap">
+        <p class="cta-banner__text" data-i18n="cta_order_text">Prête à recevoir la vôtre ?</p>
+        <a
+          href="https://wa.me/212666642255?text=Bonjour%20Khaire%2C%20je%20souhaite%20commander%20Le%20Jabador%20Khaire%20%E2%80%94%20pouvez-vous%20confirmer%20la%20disponibilit%C3%A9%20%3F"
+          class="btn btn--primary whatsapp-cta"
+          data-cta
+          data-cta-intent="order"
+          data-cta-placement="after_benefits"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path fill="currentColor" d="M12.04 2.003c-5.52 0-9.996 4.476-9.996 9.997 0 1.76.46 3.483 1.336 5.003l-1.419 5.183 5.315-1.394a9.98 9.98 0 0 0 4.764 1.212h.004c5.52 0 9.997-4.476 9.997-9.997 0-2.672-1.04-5.182-2.929-7.07a9.93 9.93 0 0 0-7.072-2.934Z"/>
+          </svg>
+          <span data-i18n="cta">Commander sur WhatsApp</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- =================================================================
+        STORY — brand confidence layer (moved after benefits)
+    ================================================================= -->
+    <section class="story" aria-label="À propos">
+      <div class="story__media">
+        <picture>
+          <source srcset="assets/images/story.webp" type="image/webp" />
+          <img src="assets/images/story.jpg" alt="Atelier Khaire" loading="lazy" decoding="async" width="1600" height="1000" />
+        </picture>
+      </div>
+      <div class="story__text">
+        <p class="eyebrow" data-i18n="story_eyebrow">À propos</p>
+        <h2 data-i18n="story_title">L'héritage marocain, cousu main.</h2>
+        <p data-i18n="story_body_1">
+          Khaire célèbre l'élégance du vêtement traditionnel marocain — caftan, jabador, takchita. Notre premier drop met à l'honneur le jabador : une pièce brodée main par les artisanes de notre atelier, avec un soin porté au moindre détail — des fils précieux aux boutons tressés.
+        </p>
+        <p data-i18n="story_body_2">
+          Nous créons en petites séries, pour préserver le geste et la singularité
+          de chaque vêtement. Une allure contemporaine, un héritage vivant.
+        </p>
+      </div>
+    </section>
+
+    <!-- =================================================================
+        PRODUCT DETAILS — specs only (sizing / fabric / care).
+        Shipping/returns moved to FAQ below.
+    ================================================================= -->
+    <section class="details" id="size-guide" aria-label="Détails produit">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="details_eyebrow">Caractéristiques</p>
+        <h2 data-i18n="details_title">Matières et entretien</h2>
+      </div>
+      <div class="details__wrap">
+        <details open>
+          <summary>
+            <span data-i18n="details_sizing_title">Guide des tailles</span>
+            <span class="details__chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="details__body">
+            <p data-i18n="details_sizing_body">S / M convient aux tailles 36-40. L / XL convient aux tailles 42-46. Pour toute question sur la coupe, notre styliste vous guide sur WhatsApp.</p>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span data-i18n="details_fabric_title">Matières</span>
+            <span class="details__chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="details__body">
+            <p data-i18n="details_fabric_body">Tissus haut de gamme sélectionnés avec soin. Broderie main sur l'ensemble de la pièce. Boutons tressés et finitions artisanales.</p>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span data-i18n="details_care_title">Entretien</span>
+            <span class="details__chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="details__body">
+            <p data-i18n="details_care_body">Nettoyage à sec recommandé. Ne pas tordre. Suspendre sur un cintre rembourré pour préserver les broderies.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- =================================================================
+        PRESS / TRUST CARDS — media and founder proof.
+    ================================================================= -->
+    <section class="testimonials" aria-label="Presse et confiance">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="testimonials_eyebrow">Presse</p>
+        <h2 data-i18n="testimonials_title">Presse & savoir-faire</h2>
+      </div>
+      <ul class="testimonials__grid">
+        <li class="testimonial">
+          <header class="testimonial__head">
+            <span class="testimonial__avatar" aria-hidden="true">TV</span>
+            <div class="testimonial__meta">
+              <cite data-i18n="testimonial_1_name">MBC5</cite>
+              <span class="testimonial__sub" data-i18n="testimonial_1_city">Mention média</span>
+            </div>
+          </header>
+          <blockquote class="testimonial__bubble" data-i18n="testimonial_1_quote">Chaimae Belkhir a récemment présenté l'univers Khaire sur MBC5 : une maison dédiée aux créations marocaines, au jabador et au savoir-faire artisanal.</blockquote>
+          <p class="testimonial__receipt">
+            <span class="testimonial__time" data-i18n="testimonial_1_time">Lien officiel à ajouter</span>
+          </p>
+        </li>
+        <li class="testimonial">
+          <header class="testimonial__head">
+            <span class="testimonial__avatar" aria-hidden="true">CB</span>
+            <div class="testimonial__meta">
+              <cite data-i18n="testimonial_2_name">Chaimae Belkhir</cite>
+              <span class="testimonial__sub" data-i18n="testimonial_2_city">Fondatrice</span>
+            </div>
+          </header>
+          <blockquote class="testimonial__bubble" data-i18n="testimonial_2_quote">Fondatrice et directrice créative, Chaimae Belkhir construit Khaire autour de pièces traditionnelles marocaines brodées main, pensées pour les femmes d'aujourd'hui.</blockquote>
+          <p class="testimonial__receipt">
+            <span class="testimonial__time" data-i18n="testimonial_2_time">Khaire</span>
+          </p>
+        </li>
+        <li class="testimonial">
+          <header class="testimonial__head">
+            <span class="testimonial__avatar" aria-hidden="true">KH</span>
+            <div class="testimonial__meta">
+              <cite data-i18n="testimonial_3_name">Créations Khaire</cite>
+              <span class="testimonial__sub" data-i18n="testimonial_3_city">Jabador · Caftan · Takchita</span>
+            </div>
+          </header>
+          <blockquote class="testimonial__bubble" data-i18n="testimonial_3_quote">Khaire travaille le vestiaire marocain de cérémonie : jabador, caftan, kaftan, takchita et tenues d'Aïd en petites séries.</blockquote>
+          <p class="testimonial__receipt">
+            <span class="testimonial__time" data-i18n="testimonial_3_time">Maroc</span>
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- =================================================================
+        FAQ — answers the last blockers before conversion
+    ================================================================= -->
+    <section class="faq" aria-label="Questions fréquentes">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="faq_eyebrow">FAQ</p>
+        <h2 data-i18n="faq_title">Questions fréquentes</h2>
+      </div>
+      <div class="faq__wrap">
+        <details>
+          <summary>
+            <span data-i18n="faq_1_q">Est-il disponible en stock actuellement ?</span>
+            <span class="details__chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="details__body"><p data-i18n="faq_1_a">Nos pièces sont fabriquées en très petites quantités et partent vite. Pour confirmer la disponibilité de votre taille et coloris, écrivez-nous sur WhatsApp — nous répondons en 5 minutes ou moins.</p></div>
+        </details>
+        <details>
+          <summary>
+            <span data-i18n="faq_2_q">Combien de temps pour la livraison ?</span>
+            <span class="details__chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="details__body"><p data-i18n="faq_2_a">24 à 48 heures partout au Maroc. Nous expédions le jour même quand la commande est confirmée avant 16 h.</p></div>
+        </details>
+        <details>
+          <summary>
+            <span data-i18n="faq_3_q">Comment se passe le paiement ?</span>
+            <span class="details__chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="details__body"><p data-i18n="faq_3_a">Un acompte de 50% est demandé à la commande pour réserver votre pièce. Le solde est réglé à la livraison. Notre styliste vous partage les modalités de paiement de l'acompte sur WhatsApp (virement, Wafacash, CashPlus).</p></div>
+        </details>
+        <details>
+          <summary>
+            <span data-i18n="faq_4_q">Puis-je échanger la pièce si elle ne convient pas ?</span>
+            <span class="details__chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="details__body"><p data-i18n="faq_4_a">Oui. Échange possible dans les 24 heures suivant la réception, à condition que la pièce n'ait pas été portée et qu'elle soit retournée dans son emballage d'origine.</p></div>
+        </details>
+        <details>
+          <summary>
+            <span data-i18n="faq_5_q">En combien de temps répondez-vous sur WhatsApp ?</span>
+            <span class="details__chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="details__body"><p data-i18n="faq_5_a">5 minutes ou moins, aux heures d'ouverture de notre atelier.</p></div>
+        </details>
+        <details>
+          <summary>
+            <span data-i18n="faq_6_q">Comment je commande via WhatsApp ?</span>
+            <span class="details__chev" aria-hidden="true">+</span>
+          </summary>
+          <div class="details__body"><p data-i18n="faq_6_a">Cliquez sur un bouton WhatsApp, envoyez le message pré-rempli. Notre styliste confirme la disponibilité, vous aide à choisir la taille et le coloris, organise l'acompte et la livraison. C'est tout.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- =================================================================
+        CTA BANNER (question) — after FAQ
+    ================================================================= -->
+    <section class="cta-banner" aria-label="Poser une question">
+      <div class="cta-banner__wrap">
+        <p class="cta-banner__text" data-i18n="cta_question_text">Une question avant de commander ?</p>
+        <a
+          href="https://wa.me/212666642255?text=Bonjour%20Khaire%2C%20j%27aurais%20une%20question%20sur%20Le%20Jabador%20Khaire."
+          class="btn btn--primary whatsapp-cta"
+          data-cta
+          data-cta-intent="question"
+          data-cta-placement="after_faq"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path fill="currentColor" d="M12.04 2.003c-5.52 0-9.996 4.476-9.996 9.997 0 1.76.46 3.483 1.336 5.003l-1.419 5.183 5.315-1.394a9.98 9.98 0 0 0 4.764 1.212h.004c5.52 0 9.997-4.476 9.997-9.997 0-2.672-1.04-5.182-2.929-7.07a9.93 9.93 0 0 0-7.072-2.934Z"/>
+          </svg>
+          <span data-i18n="cta_question_button">Poser une question</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- =================================================================
+        CLOSING CTA — warm final push
+    ================================================================= -->
+    <section class="closing-cta" aria-label="Commander">
+      <p class="eyebrow" data-i18n="closing_eyebrow">Pièce en édition limitée</p>
+      <h2 data-i18n="closing_title">Une pièce. Faite pour durer.</h2>
+      <p class="closing-cta__text" data-i18n="closing_body">Réservez en quelques secondes sur WhatsApp. Notre styliste vous guide pour choisir la taille, le coloris et organiser l'acompte.</p>
+      <a
+        href="https://wa.me/212666642255?text=Bonjour%20Khaire%2C%20je%20souhaite%20commander%20Le%20Jabador%20Khaire%20%E2%80%94%20pouvez-vous%20confirmer%20la%20disponibilit%C3%A9%20%3F"
+        class="btn btn--primary whatsapp-cta"
+        data-cta
+        data-cta-intent="order"
+        data-cta-placement="closing"
+        target="_blank"
+        rel="noopener"
+      >
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <path fill="currentColor" d="M12.04 2.003c-5.52 0-9.996 4.476-9.996 9.997 0 1.76.46 3.483 1.336 5.003l-1.419 5.183 5.315-1.394a9.98 9.98 0 0 0 4.764 1.212h.004c5.52 0 9.997-4.476 9.997-9.997 0-2.672-1.04-5.182-2.929-7.07a9.93 9.93 0 0 0-7.072-2.934Z"/>
+        </svg>
+        <span data-i18n="cta">Commander sur WhatsApp</span>
+      </a>
+    </section>
+
+    <!-- =================================================================
+        LIGHTBOX — shared modal scroller. Two entry points open it:
+          1. Tapping the hero picture   → scrolls through all VARIANTS
+          2. Tapping a detail-gallery tile → scrolls through DETAILS
+        Keyboard: Esc closes, ← → paginate. Backdrop click closes. On
+        touch devices, horizontal swipe paginates (see app.js).
+    ================================================================= -->
+    <div
+      class="lightbox"
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Aperçu"
+      hidden
+    >
+      <button
+        type="button"
+        class="lightbox__btn lightbox__close"
+        data-lightbox-close
+        data-i18n-aria-label="lightbox_close"
+        aria-label="Fermer"
+      >&times;</button>
+      <p class="lightbox__counter" data-lightbox-counter aria-live="polite"></p>
+      <button
+        type="button"
+        class="lightbox__btn lightbox__prev"
+        data-lightbox-prev
+        data-i18n-aria-label="lightbox_prev"
+        aria-label="Précédent"
+      >&lsaquo;</button>
+      <div class="lightbox__stage">
+        <picture data-lightbox-img>
+          <source srcset="" type="image/webp" />
+          <img src="" alt="" />
+        </picture>
+      </div>
+      <button
+        type="button"
+        class="lightbox__btn lightbox__next"
+        data-lightbox-next
+        data-i18n-aria-label="lightbox_next"
+        aria-label="Suivant"
+      >&rsaquo;</button>
+    </div>
+  </main>
+
+  <!-- Floating WhatsApp FAB (desktop only — see .wa-fab media query).
+       Revealed by app.js when the user scrolls past the hero. Carries
+       the "inquiry" intent so the prefilled message matches the
+       conversational, question-first nature of a mid-read tap. -->
+  <a
+    class="wa-fab"
+    href="https://wa.me/212666642255?text=Bonjour%20Khaire%2C%20j%27aurais%20une%20question%20sur%20Le%20Jabador%20Khaire."
+    target="_blank"
+    rel="noopener"
+    aria-label="Parler à l'équipe Khaire sur WhatsApp"
+    data-i18n-aria-label="wa_fab_aria"
+    data-cta
+    data-cta-intent="inquiry"
+    data-cta-placement="fab"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M12.04 2.003c-5.52 0-9.996 4.476-9.996 9.997 0 1.76.46 3.483 1.336 5.003l-1.419 5.183 5.315-1.394a9.98 9.98 0 0 0 4.764 1.212h.004c5.52 0 9.997-4.476 9.997-9.997 0-2.672-1.04-5.182-2.929-7.07a9.93 9.93 0 0 0-7.072-2.934Zm4.55 14.175c-.25-.124-1.475-.728-1.704-.81-.228-.084-.395-.125-.562.125-.167.25-.645.81-.79.977-.146.167-.292.188-.541.062-.25-.125-1.055-.389-2.01-1.24-.743-.663-1.244-1.481-1.39-1.73-.146-.25-.016-.385.109-.51.112-.111.25-.292.375-.437.125-.146.167-.25.25-.417.083-.167.042-.312-.021-.437-.062-.125-.562-1.357-.77-1.857-.203-.488-.41-.422-.562-.43-.146-.007-.312-.009-.479-.009a.918.918 0 0 0-.667.312c-.229.25-.875.855-.875 2.086s.896 2.42 1.02 2.586c.125.167 1.762 2.69 4.27 3.772.596.257 1.061.41 1.423.525.598.19 1.142.163 1.572.099.48-.072 1.475-.602 1.683-1.184.208-.583.208-1.082.146-1.184-.062-.104-.229-.167-.479-.292Z"/>
+    </svg>
+  </a>
+  <span class="wa-fab-tip" role="tooltip" data-i18n="wa_fab_tip">L'équipe répond en ~5 min</span>
+
+  <!-- Sticky mobile CTA -->
+  <div class="sticky-cta" aria-hidden="false">
+    <div class="sticky-cta__inner">
+      <div class="sticky-cta__price">
+        <span class="sticky-cta__amount">1199 <small>dh</small></span>
+        <span class="sticky-cta__size" data-current-size>S / M</span>
+      </div>
+      <a
+        href="https://wa.me/212666642255?text=Bonjour%20Khaire%2C%20je%20souhaite%20commander%20Le%20Jabador%20Khaire%20%E2%80%94%20pouvez-vous%20confirmer%20la%20disponibilit%C3%A9%20%3F"
+        class="btn btn--primary btn--compact whatsapp-cta"
+        data-cta
+        data-cta-intent="order"
+        data-cta-placement="sticky"
+        target="_blank"
+        rel="noopener"
+      >
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <path fill="currentColor" d="M12.04 2.003c-5.52 0-9.996 4.476-9.996 9.997 0 1.76.46 3.483 1.336 5.003l-1.419 5.183 5.315-1.394a9.98 9.98 0 0 0 4.764 1.212h.004c5.52 0 9.997-4.476 9.997-9.997 0-2.672-1.04-5.182-2.929-7.07a9.93 9.93 0 0 0-7.072-2.934Z"/>
+        </svg>
+        <span data-i18n="cta_short">Commander</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer__wrap">
+      <a href="#top" class="site-footer__brand" aria-label="Khaire">
+        <img src="assets/images/logo-wordmark.png" alt="Khaire" width="553" height="120" loading="lazy" />
+      </a>
+      <p class="site-footer__tag" data-i18n="footer_tag">Caftans marocains fait main.</p>
+
+      <ul class="site-footer__social" aria-label="Réseaux sociaux">
+        <li><a href="https://www.instagram.com/khairedesigns/" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@khairedesigns" aria-label="TikTok" target="_blank" rel="noopener">TikTok</a></li>
+        <li>
+          <a
+            href="https://wa.me/212666642255?text=Bonjour%20Khaire%2C%20j%27aurais%20une%20question%20sur%20Le%20Jabador%20Khaire."
+            aria-label="WhatsApp"
+            target="_blank"
+            rel="noopener"
+            data-cta
+            data-cta-intent="inquiry"
+            data-cta-placement="footer"
+          >WhatsApp</a>
+        </li>
+      </ul>
+
+      <p class="site-footer__copy">
+        <span data-i18n="footer_copy">© 2026 Khaire. Tous droits réservés.</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Both scripts are deferred. Because scripts with `defer` execute in
+       order, translations.js is guaranteed to populate window.KHAIRE_I18N
+       before app.js reads it. Neither blocks HTML parsing or FCP. -->
+  <script src="js/translations.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

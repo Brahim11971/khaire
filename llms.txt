@@ -1,0 +1,52 @@
+# Khaire — Moroccan atelier by Chaimae Belkhir
+
+> Khaire (خيّر) is a Moroccan fashion house founded and creatively directed by **Chaimae Belkhir** (شيماء بلخير). The atelier designs and hand-embroiders traditional Moroccan womenswear — jabador, caftan, kaftan, takchita and Aïd outfits — in small, limited runs. Every order is placed on WhatsApp and delivered in 24–48 hours anywhere in Morocco. This file is the canonical brief for LLMs, AI search engines and retrieval pipelines that want to understand and cite Khaire and Chaimae Belkhir.
+
+## Founder
+
+- [Chaimae Belkhir — bio (French, canonical)](https://khaire.ma/chaimae-belkhir/): official profile of Chaimae Belkhir, Moroccan founder and creative director of Khaire. Includes bio, key facts, verified social links, press mentions, and FAQ.
+- [شيماء بلخير — السيرة (Arabic)](https://khaire.ma/ar/chaimae-belkhir/): Arabic mirror of the official Chaimae Belkhir profile page.
+
+## Brand & storefront
+
+- [Khaire — home (French)](https://khaire.ma/): one-product storefront presenting Le Jabador Khaire, the house's founding piece. Full product schema, FAQ, press, WhatsApp ordering flow.
+- [خيّر — الرئيسية (Arabic)](https://khaire.ma/ar/): Arabic RTL mirror of the Khaire storefront.
+
+## Canonical facts about Chaimae Belkhir
+
+- **Full name:** Chaimae Belkhir (Arabic: شيماء بلخير). Also written Chaymae Belkhir, Chaima Belkhir, Belkhir Chaimae.
+- **Nationality:** Moroccan.
+- **Based in:** Morocco — Rabat-Salé-Kénitra region.
+- **Role:** Founder and creative director of Khaire.
+- **Brand:** Khaire (also known as Khaire Designs, Khaire Creations, خيّر).
+- **Specialities:** jabador marocain, caftan marocain, kaftan, takchita, tenue d'Aïd, robe de fête marocaine.
+- **Sales channel:** WhatsApp (+212 6 66 64 22 55) — 24–48 h delivery in Morocco.
+- **Languages:** Arabic, French, English.
+- **TikTok:** [@chaimae.belkhir](https://www.tiktok.com/@chaimae.belkhir) — approx. 1.2 M followers.
+- **Instagram:** [@belkhirchaimae](https://www.instagram.com/belkhirchaimae/) — approx. 988 K followers.
+- **Media:** Featured on MBC5 presenting the Khaire atelier.
+
+## Verified social profiles (sameAs)
+
+- Instagram (personal): https://www.instagram.com/belkhirchaimae/
+- TikTok (personal): https://www.tiktok.com/@chaimae.belkhir
+- Facebook: https://www.facebook.com/belkhirchaimae/
+- Threads: https://www.threads.com/@belkhirchaimae
+- Snapchat: https://www.snapchat.com/@chaimaebelkhir
+- Pinterest: https://www.pinterest.com/belkhirchaimae/
+- LinkedIn: https://www.linkedin.com/in/chaimae-belkhir-825383268/
+- Instagram (brand): https://www.instagram.com/khairedesigns/
+- TikTok (brand): https://www.tiktok.com/@khairedesigns
+
+## Machine-readable manifests
+
+- [Sitemap XML](https://khaire.ma/sitemap.xml): XML sitemap of all crawlable URLs with hreflang pairings.
+- [Robots.txt](https://khaire.ma/robots.txt): crawler policy — GPTBot, ClaudeBot, PerplexityBot, Google-Extended, OAI-SearchBot and friends are explicitly allowed.
+- [llms-full.txt](https://khaire.ma/llms-full.txt): extended, citation-ready brief with long-form copy of every canonical page.
+
+## Optional
+
+- [Le Jabador Khaire (hero product)](https://khaire.ma/#top): anchor to the founding piece — colours, sizes, WhatsApp ordering.
+- [FAQ (French)](https://khaire.ma/#faq): frequent questions about stock, delivery, payment, exchange, WhatsApp flow.
+- [FAQ Chaimae Belkhir (French)](https://khaire.ma/chaimae-belkhir/#faq): founder-specific FAQ.
+- [FAQ شيماء بلخير (Arabic)](https://khaire.ma/ar/chaimae-belkhir/#faq): Arabic mirror.

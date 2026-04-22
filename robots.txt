@@ -1,0 +1,114 @@
+# Khaire — robots.txt
+# Last reviewed: 2026-04-20
+# Policy: open-by-default. All major search + AI crawlers are explicitly
+# allowed. Only internal tooling and build scripts are disallowed.
+
+# -------- Search engines --------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# -------- AI / LLM training + retrieval (explicit opt-in) --------
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google AI / Gemini
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (feeds most open LLMs)
+User-agent: CCBot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Other retrieval / index bots
+User-agent: Amazonbot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+User-agent: Omgili
+Allow: /
+
+User-agent: ImagesiftBot
+Allow: /
+
+# -------- Default --------
+User-agent: *
+Allow: /
+Disallow: /build-preview.py
+Disallow: /tools/
+Disallow: /preview.html
+
+# -------- Manifests --------
+Sitemap: https://khaire.ma/sitemap.xml
+
+# LLM-oriented manifests (emerging Answer.AI convention).
+# See https://khaire.ma/llms.txt and https://khaire.ma/llms-full.txt
