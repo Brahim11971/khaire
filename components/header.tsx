@@ -34,12 +34,15 @@ export function Header() {
     >
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Left: Language Selector */}
-          <div className="flex items-center gap-4">
+          {/* Left: Language Selector + Mobile Menu */}
+          <div className="flex items-center gap-2">
+            {/* Language Selector - Always visible */}
             <button 
               type="button"
-              className={`hidden lg:flex items-center gap-1 text-sm font-medium transition-colors ${
-                isScrolled ? "text-[#1a1a1a]" : "text-white"
+              className={`flex items-center gap-1 text-sm font-medium transition-colors px-2 py-1 rounded ${
+                isScrolled 
+                  ? "text-[#1a1a1a] hover:bg-[#f5f1eb]" 
+                  : "text-white hover:bg-white/10"
               }`}
             >
               <span>FR</span>
@@ -49,8 +52,8 @@ export function Header() {
             {/* Mobile Menu Button */}
             <button
               type="button"
-              className={`lg:hidden p-2 -ml-2 transition-colors ${
-                isScrolled ? "text-[#1a1a1a]" : "text-white"
+              className={`lg:hidden p-2 transition-colors rounded ${
+                isScrolled ? "text-[#1a1a1a] hover:bg-[#f5f1eb]" : "text-white hover:bg-white/10"
               }`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}

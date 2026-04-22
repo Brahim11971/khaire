@@ -9,11 +9,13 @@ import { WhyKhaire } from "@/components/why-khaire"
 import { Press } from "@/components/press"
 import { Faq } from "@/components/faq"
 import { Footer } from "@/components/footer"
+import { StickyOrderBar } from "@/components/sticky-order-bar"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#faf9f7]">
       <Header />
+      <StickyOrderBar />
       <main>
         <Hero />
         <TrustBadges />
