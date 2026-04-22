@@ -1,8 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
-import { Play, Star, Clock, Truck, RefreshCw, Shield } from "lucide-react"
+import { Play, Star, Clock, Truck, RefreshCw, Shield, X, ChevronLeft, ChevronRight } from "lucide-react"
 
 const productImages = [
   { src: "/images/hero-main.png", alt: "Le Jabador Khaire - Vue principale" },
@@ -24,6 +24,43 @@ const benefits = [
 export function Hero() {
   const [selectedSize, setSelectedSize] = useState(sizes[0])
   const [currentImage, setCurrentImage] = useState(0)
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [lightboxIndex, setLightboxIndex] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024)
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
+  // Lock body scroll when lightbox is open
+  useEffect(() => {
+    if (lightboxOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = ""
+    }
+    return () => { document.body.style.overflow = "" }
+  }, [lightboxOpen])
+
+  const handleThumbnailClick = (index: number) => {
+    if (isMobile) {
+      setLightboxIndex(index)
+      setLightboxOpen(true)
+    } else {
+      setCurrentImage(index)
+    }
+  }
+
+  const nextImage = () => {
+    setLightboxIndex((prev) => (prev + 1) % productImages.length)
+  }
+
+  const prevImage = () => {
+    setLightboxIndex((prev) => (prev - 1 + productImages.length) % productImages.length)
+  }
 
   return (
     <section>
@@ -163,7 +200,7 @@ export function Hero() {
                 <button
                   key={index}
                   type="button"
-                  onClick={() => setCurrentImage(index)}
+                  onClick={() => handleThumbnailClick(index)}
                   className={`relative flex-1 aspect-[3/4] overflow-hidden rounded-sm transition-all ${
                     currentImage === index ? "ring-2 ring-[#3d5a45] ring-offset-1" : "opacity-60 hover:opacity-100"
                   }`}
@@ -180,6 +217,79 @@ export function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Mobile Lightbox */}
+      {lightboxOpen && (
+        <div className="fixed inset-0 z-[100] bg-black/95 lg:hidden">
+          {/* Close Button */}
+          <button
+            type="button"
+            onClick={() => setLightboxOpen(false)}
+            className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+            aria-label="Fermer"
+          >
+            <X size={20} />
+          </button>
+
+          {/* Image Counter */}
+          <div className="absolute top-5 left-1/2 -translate-x-1/2 text-white/70 text-sm">
+            {lightboxIndex + 1} / {productImages.length}
+          </div>
+
+          {/* Main Image */}
+          <div className="h-full flex items-center justify-center p-4">
+            <div className="relative w-full max-w-md aspect-[3/4]">
+              <Image
+                src={productImages[lightboxIndex].src}
+                alt={productImages[lightboxIndex].alt}
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            type="button"
+            onClick={prevImage}
+            className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+            aria-label="Image precedente"
+          >
+            <ChevronLeft size={24} />
+          </button>
+          <button
+            type="button"
+            onClick={nextImage}
+            className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+            aria-label="Image suivante"
+          >
+            <ChevronRight size={24} />
+          </button>
+
+          {/* Thumbnail Strip */}
+          <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2 px-4">
+            {productImages.map((img, index) => (
+              <button
+                key={index}
+                type="button"
+                onClick={() => setLightboxIndex(index)}
+                className={`relative w-14 h-[70px] overflow-hidden rounded-sm transition-all ${
+                  lightboxIndex === index 
+                    ? "ring-2 ring-white" 
+                    : "opacity-50 hover:opacity-80"
+                }`}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover"
+                />
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   )
 }
