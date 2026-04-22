@@ -49,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className="bg-[#faf9f7]">
+    <html lang="fr" className="bg-background">
       <body>{children}</body>
     </html>
   )
