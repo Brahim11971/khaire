@@ -26,10 +26,10 @@ export function Hero() {
   const [currentImage, setCurrentImage] = useState(0)
 
   return (
-    <section className="h-[70vh] lg:h-screen">
-      <div className="grid lg:grid-cols-[1fr,420px] xl:grid-cols-[1fr,480px] h-full">
-        {/* Left: Image Section - full height of section */}
-        <div className="relative overflow-hidden bg-[#1a1a1a]">
+    <section>
+      <div className="lg:grid lg:grid-cols-[1fr,420px] xl:grid-cols-[1fr,480px] lg:h-screen">
+        {/* Left: Image Section - 70vh on mobile, full height on desktop */}
+        <div className="relative overflow-hidden bg-[#1a1a1a] h-[70vh] lg:h-full">
           {/* Main Image Container - fills full height */}
           <div className="absolute inset-0">
             <Image
@@ -77,7 +77,7 @@ export function Hero() {
         </div>
 
         {/* Right: Product Details Panel */}
-        <div className="bg-[#faf9f7] p-6 lg:p-8 xl:p-10 flex flex-col lg:pt-24 overflow-y-auto">
+        <div className="bg-[#faf9f7] p-6 lg:p-8 xl:p-10 flex flex-col lg:pt-24 lg:overflow-y-auto">
           {/* Atelier Status Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#3d5a45]/30 bg-[#3d5a45]/5 mb-5 self-start">
             <span className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse" />
