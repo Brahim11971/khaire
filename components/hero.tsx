@@ -26,12 +26,12 @@ export function Hero() {
   const [currentImage, setCurrentImage] = useState(0)
 
   return (
-    <section className="min-h-screen">
-      <div className="grid lg:grid-cols-[1fr,420px] xl:grid-cols-[1fr,480px] min-h-screen">
-        {/* Left: Image Section */}
+    <section className="h-screen">
+      <div className="grid lg:grid-cols-[1fr,420px] xl:grid-cols-[1fr,480px] h-full">
+        {/* Left: Image Section with 4:5 aspect ratio image */}
         <div className="relative overflow-hidden bg-[#1a1a1a]">
-          {/* Main Image */}
-          <div className="relative h-[70vh] lg:h-full">
+          {/* Main Image Container - fills full height */}
+          <div className="relative h-[60vh] lg:h-full">
             <Image
               src={productImages[currentImage].src}
               alt={productImages[currentImage].alt}
