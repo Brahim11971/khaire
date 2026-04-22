@@ -26,12 +26,12 @@ export function Hero() {
   const [currentImage, setCurrentImage] = useState(0)
 
   return (
-    <section className="h-screen">
-      <div className="grid lg:grid-cols-[1fr,420px] xl:grid-cols-[1fr,480px] h-full">
-        {/* Left: Image Section with 4:5 aspect ratio image */}
-        <div className="relative overflow-hidden bg-[#1a1a1a] h-full">
+    <section className="min-h-screen lg:h-screen">
+      <div className="flex flex-col lg:grid lg:grid-cols-[1fr,420px] xl:grid-cols-[1fr,480px] min-h-screen lg:h-full">
+        {/* Left: Image Section - 70vh on mobile, full height on desktop */}
+        <div className="relative overflow-hidden bg-[#1a1a1a] h-[70vh] lg:h-full">
           {/* Main Image Container - fills full height */}
-          <div className="relative h-full w-full">
+          <div className="absolute inset-0">
             <Image
               src={productImages[currentImage].src}
               alt={productImages[currentImage].alt}
