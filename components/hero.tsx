@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { Play, Star, ChevronLeft, ChevronRight } from "lucide-react"
+import { Play, Star } from "lucide-react"
 
 const productImages = [
   { src: "/assets/images/hero.jpg", alt: "Le Jabador Khaire - Vue principale" },
@@ -15,31 +15,23 @@ const productImages = [
 const sizes = ["S / M", "L / XL"]
 
 const benefits = [
-  "Livraison 24-48h partout au Maroc",
-  "Réponse WhatsApp en 5 minutes",
-  "Échange sous 24h si besoin",
-  "Paiement sécurisé à la livraison",
+  { icon: "truck", text: "Livraison 24-48h partout au Maroc" },
+  { icon: "clock", text: "Réponse WhatsApp en 5 minutes" },
+  { icon: "refresh", text: "Échange sous 24h si besoin" },
+  { icon: "shield", text: "Paiement sécurisé à la livraison" },
 ]
 
 export function Hero() {
   const [selectedSize, setSelectedSize] = useState(sizes[0])
   const [currentImage, setCurrentImage] = useState(0)
 
-  const nextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % productImages.length)
-  }
-
-  const prevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + productImages.length) % productImages.length)
-  }
-
   return (
     <section className="pt-16 lg:pt-20">
-      <div className="grid lg:grid-cols-2 min-h-[calc(100vh-5rem)]">
+      <div className="grid lg:grid-cols-[1fr,480px] min-h-[calc(100vh-5rem)]">
         {/* Left: Image Section */}
-        <div className="relative bg-cream overflow-hidden">
+        <div className="relative overflow-hidden">
           {/* Main Image */}
-          <div className="relative h-[60vh] lg:h-full">
+          <div className="relative h-[65vh] lg:h-full">
             <Image
               src={productImages[currentImage].src}
               alt={productImages[currentImage].alt}
@@ -47,47 +39,33 @@ export function Hero() {
               className="object-cover"
               priority
             />
-            
-            {/* Image Navigation */}
-            <button
-              onClick={prevImage}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-md"
-              aria-label="Image précédente"
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <button
-              onClick={nextImage}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-md"
-              aria-label="Image suivante"
-            >
-              <ChevronRight size={20} />
-            </button>
 
             {/* Content Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-10 bg-gradient-to-t from-black/60 via-black/30 to-transparent text-white">
-              <div className="flex items-center gap-2 text-sm mb-3">
-                <span className="text-gold">✦</span>
-                <span className="tracking-wider">ÉDITION TRÈS LIMITÉE</span>
+            <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-12 bg-gradient-to-t from-black/70 via-black/40 to-transparent text-white">
+              <div className="flex items-center gap-2 text-sm mb-4">
+                <span className="text-[#c4a574]">✦</span>
+                <span className="tracking-[0.2em] text-xs uppercase">Édition très limitée</span>
               </div>
-              <h1 className="text-4xl lg:text-5xl font-light leading-tight mb-4 text-balance">
+              <h1 className="text-4xl lg:text-6xl font-light leading-[1.1] mb-5">
                 Le Jabador<br />Khaire
               </h1>
-              <p className="text-white/80 max-w-md mb-6 leading-relaxed">
+              <p className="text-white/80 max-w-md mb-8 leading-relaxed text-sm lg:text-base">
                 Un héritage marocain, cousu main. Chaque pièce raconte une histoire de tradition, de patience et de beauté.
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap items-center gap-4">
                 <a
                   href="#details"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-foreground text-sm tracking-wider hover:bg-cream transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-[#1a1a1a] text-sm tracking-wider hover:bg-[#f5f1eb] transition-colors"
                 >
                   DÉCOUVRIR LA PIÈCE
                 </a>
                 <button
                   type="button"
-                  className="inline-flex items-center gap-2 px-4 py-3 border border-white/40 text-sm tracking-wider hover:bg-white/10 transition-colors"
+                  className="inline-flex items-center gap-3 text-sm tracking-wider hover:text-white/80 transition-colors"
                 >
-                  <Play size={16} fill="currentColor" />
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full border border-white/40">
+                    <Play size={14} fill="currentColor" className="ml-0.5" />
+                  </span>
                   VOIR LA VIDÉO
                 </button>
               </div>
@@ -96,12 +74,24 @@ export function Hero() {
         </div>
 
         {/* Right: Product Details */}
-        <div className="bg-background p-6 lg:p-12 flex flex-col justify-center">
-          <div className="max-w-md mx-auto lg:mx-0 w-full">
+        <div className="bg-[#faf9f7] p-6 lg:p-10 flex flex-col">
+          {/* Atelier Open Badge */}
+          <div className="flex items-center gap-2 mb-6 p-3 bg-[#f5f1eb] rounded-lg">
+            <span className="flex h-2.5 w-2.5 relative">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+            </span>
+            <span className="text-sm text-[#1a1a1a]">
+              <span className="font-medium">{"L'atelier est ouvert"}</span>
+              <span className="text-[#6b6b6b]"> · Réponse en ~5 minutes</span>
+            </span>
+          </div>
+
+          <div className="flex-1 flex flex-col justify-center">
             {/* Badge */}
-            <div className="flex items-center gap-2 text-sm text-muted mb-4">
-              <span className="text-gold">✦</span>
-              <span className="tracking-wider">ÉDITION TRÈS LIMITÉE</span>
+            <div className="flex items-center gap-2 text-sm text-[#6b6b6b] mb-3">
+              <span className="text-[#c4a574]">✦</span>
+              <span className="tracking-[0.15em] text-xs uppercase">Édition très limitée</span>
             </div>
 
             {/* Title */}
@@ -109,52 +99,52 @@ export function Hero() {
 
             {/* Rating */}
             <div className="flex items-center gap-2 mb-6">
-              <div className="flex items-center gap-0.5 text-gold">
+              <div className="flex items-center gap-0.5 text-[#c4a574]">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={14} fill="currentColor" />
                 ))}
               </div>
               <span className="text-sm font-medium">5.0</span>
-              <span className="text-sm text-muted">· 12 avis</span>
+              <span className="text-sm text-[#6b6b6b]">· 12 avis</span>
             </div>
 
             {/* Price */}
             <div className="mb-6">
               <div className="flex items-baseline gap-2">
                 <span className="text-3xl font-medium">1199</span>
-                <span className="text-xl text-muted">dh</span>
+                <span className="text-xl text-[#6b6b6b]">dh</span>
               </div>
-              <p className="text-sm text-muted mt-1">Acompte 50% - Solde à la livraison</p>
+              <p className="text-sm text-[#6b6b6b] mt-1">Acompte 50% - Solde à la livraison</p>
             </div>
 
             {/* Size Selector */}
             <div className="mb-6">
-              <label className="block text-sm tracking-wider mb-3">TAILLE</label>
+              <label className="block text-xs tracking-[0.15em] uppercase mb-3 text-[#6b6b6b]">Taille</label>
               <div className="grid grid-cols-2 gap-3">
                 {sizes.map((size) => (
                   <button
                     key={size}
                     type="button"
                     onClick={() => setSelectedSize(size)}
-                    className={`py-3 px-4 text-sm border transition-colors ${
+                    className={`py-3.5 px-4 text-sm border transition-all ${
                       selectedSize === size
-                        ? "bg-foreground text-white border-foreground"
-                        : "border-border hover:border-foreground"
+                        ? "bg-[#1a1a1a] text-white border-[#1a1a1a]"
+                        : "border-[#e5e0d8] hover:border-[#1a1a1a] text-[#1a1a1a]"
                     }`}
                   >
                     {size}
                   </button>
                 ))}
               </div>
-              <button type="button" className="text-sm text-muted underline mt-3 hover:text-foreground">
+              <button type="button" className="text-sm text-[#6b6b6b] underline underline-offset-2 mt-3 hover:text-[#1a1a1a] transition-colors">
                 Guide des tailles
               </button>
             </div>
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/212600000000?text=Bonjour, je souhaite commander le Jabador Khaire en taille {selectedSize}"
-              className="flex items-center justify-center gap-2 w-full py-4 bg-forest text-white text-sm tracking-wider hover:bg-forest-dark transition-colors mb-6"
+              href={`https://wa.me/212600000000?text=Bonjour, je souhaite commander le Jabador Khaire en taille ${selectedSize}`}
+              className="flex items-center justify-center gap-3 w-full py-4 bg-[#3d5a45] text-white text-sm tracking-wider hover:bg-[#2d4535] transition-colors rounded-sm"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -165,27 +155,27 @@ export function Hero() {
             </a>
 
             {/* Benefits */}
-            <ul className="space-y-2">
+            <ul className="space-y-3 mt-6">
               {benefits.map((benefit, index) => (
-                <li key={index} className="flex items-center gap-3 text-sm text-muted">
-                  <svg viewBox="0 0 16 16" className="w-4 h-4 text-forest flex-shrink-0">
-                    <circle cx="8" cy="8" r="8" fill="currentColor" opacity="0.1" />
+                <li key={index} className="flex items-center gap-3 text-sm text-[#6b6b6b]">
+                  <svg viewBox="0 0 16 16" className="w-4 h-4 text-[#3d5a45] flex-shrink-0">
+                    <circle cx="8" cy="8" r="8" fill="currentColor" opacity="0.15" />
                     <path fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="M5 8l2 2 4-4" />
                   </svg>
-                  {benefit}
+                  {benefit.text}
                 </li>
               ))}
             </ul>
 
             {/* Thumbnail Gallery */}
-            <div className="flex gap-2 mt-8 overflow-x-auto pb-2">
-              {productImages.map((img, index) => (
+            <div className="flex gap-2 mt-6 pt-6 border-t border-[#e5e0d8]">
+              {productImages.slice(0, 4).map((img, index) => (
                 <button
                   key={index}
                   type="button"
                   onClick={() => setCurrentImage(index)}
-                  className={`relative flex-shrink-0 w-16 h-20 overflow-hidden border-2 transition-colors ${
-                    currentImage === index ? "border-forest" : "border-transparent"
+                  className={`relative flex-shrink-0 w-16 h-20 overflow-hidden transition-all ${
+                    currentImage === index ? "ring-2 ring-[#3d5a45]" : "opacity-70 hover:opacity-100"
                   }`}
                 >
                   <Image

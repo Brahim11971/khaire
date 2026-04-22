@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Plus, Minus } from "lucide-react"
+import { Plus } from "lucide-react"
 
 const faqs = [
   {
@@ -34,27 +34,27 @@ export function Faq() {
   }
 
   return (
-    <section className="py-16 lg:py-24 bg-cream">
+    <section id="faq" className="py-16 lg:py-24 bg-[#f5f1eb]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-10">
-          <span className="text-sm tracking-wider text-muted block mb-2">FAQ</span>
-          <h2 className="text-2xl lg:text-3xl font-light">Questions fréquentes</h2>
+          <span className="text-xs tracking-[0.2em] text-[#6b6b6b] block mb-2 uppercase">FAQ</span>
+          <h2 className="text-2xl lg:text-3xl font-light text-[#1a1a1a]">Questions fréquentes</h2>
         </div>
 
         {/* FAQ List */}
         <div className="space-y-0">
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b border-border">
+            <div key={index} className="border-b border-[#e5e0d8]">
               <button
                 type="button"
                 onClick={() => toggleFaq(index)}
-                className="w-full py-5 flex items-start justify-between gap-4 text-left hover:text-forest transition-colors"
+                className="w-full py-5 flex items-start justify-between gap-4 text-left hover:text-[#3d5a45] transition-colors"
                 aria-expanded={openIndex === index}
               >
-                <span className="font-medium">{faq.question}</span>
-                <span className="flex-shrink-0 mt-1">
-                  {openIndex === index ? <Minus size={18} /> : <Plus size={18} />}
+                <span className="font-medium text-[#1a1a1a]">{faq.question}</span>
+                <span className={`flex-shrink-0 mt-1 transition-transform duration-200 ${openIndex === index ? "rotate-45" : ""}`}>
+                  <Plus size={18} className="text-[#6b6b6b]" />
                 </span>
               </button>
               <div
@@ -62,7 +62,7 @@ export function Faq() {
                   openIndex === index ? "max-h-40 pb-5" : "max-h-0"
                 }`}
               >
-                <p className="text-muted leading-relaxed pr-8">{faq.answer}</p>
+                <p className="text-[#6b6b6b] leading-relaxed pr-8">{faq.answer}</p>
               </div>
             </div>
           ))}

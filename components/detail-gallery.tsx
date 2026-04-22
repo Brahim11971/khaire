@@ -51,16 +51,16 @@ export function DetailGallery() {
   }
 
   return (
-    <section id="details" className="py-16 lg:py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="details" className="py-16 lg:py-24 bg-[#faf9f7]">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="text-gold text-2xl">✦</span>
-          <h2 className="text-2xl lg:text-3xl font-light mt-4">Regardez de plus près</h2>
+          <span className="text-[#c4a574] text-2xl">✦</span>
+          <h2 className="text-2xl lg:text-3xl font-light mt-4 text-[#1a1a1a]">Regardez de plus près</h2>
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+        {/* Gallery Grid - 2x2 layout */}
+        <div className="grid grid-cols-2 gap-4 lg:gap-6 max-w-4xl mx-auto">
           {details.map((detail, index) => (
             <button
               key={index}
@@ -74,8 +74,8 @@ export function DetailGallery() {
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <span className="absolute bottom-4 left-4 text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <span className="absolute bottom-4 left-4 text-white text-sm font-medium">
                 {detail.caption}
               </span>
             </button>
@@ -86,7 +86,7 @@ export function DetailGallery() {
         <div className="text-center mt-10">
           <button
             type="button"
-            className="inline-flex items-center gap-2 px-8 py-3 border border-foreground text-sm tracking-wider hover:bg-foreground hover:text-white transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-3.5 border border-[#1a1a1a] text-sm tracking-wider hover:bg-[#1a1a1a] hover:text-white transition-colors"
           >
             VOIR LA VIDÉO COMPLÈTE
           </button>

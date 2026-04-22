@@ -24,40 +24,38 @@ export function Press() {
   }
 
   return (
-    <section className="py-16 lg:py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 lg:py-24 bg-[#faf9f7]">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Content */}
           <div>
-            <span className="text-sm tracking-wider text-muted block mb-6">PRESSE</span>
-            <h2 className="text-2xl lg:text-3xl font-light mb-8">Ils parlent de Khaire</h2>
+            <span className="text-xs tracking-[0.2em] text-[#6b6b6b] block mb-6 uppercase">Presse</span>
+            <h2 className="text-2xl lg:text-3xl font-light mb-8 text-[#1a1a1a]">Ils parlent de Khaire</h2>
 
-            <blockquote className="text-xl lg:text-2xl font-light leading-relaxed mb-6">
+            <blockquote className="text-xl lg:text-2xl font-light leading-relaxed mb-6 text-[#1a1a1a]">
               &ldquo;{pressItems[currentIndex].quote}&rdquo;
             </blockquote>
-            <p className="text-muted">— {pressItems[currentIndex].source}</p>
+            <p className="text-[#6b6b6b]">— {pressItems[currentIndex].source}</p>
 
             {/* Navigation */}
-            {pressItems.length > 1 && (
-              <div className="flex items-center gap-4 mt-8">
-                <button
-                  type="button"
-                  onClick={prevSlide}
-                  className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-cream transition-colors"
-                  aria-label="Citation précédente"
-                >
-                  <ChevronLeft size={20} />
-                </button>
-                <button
-                  type="button"
-                  onClick={nextSlide}
-                  className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-cream transition-colors"
-                  aria-label="Citation suivante"
-                >
-                  <ChevronRight size={20} />
-                </button>
-              </div>
-            )}
+            <div className="flex items-center gap-4 mt-8">
+              <button
+                type="button"
+                onClick={prevSlide}
+                className="w-10 h-10 rounded-full border border-[#e5e0d8] flex items-center justify-center hover:bg-[#f5f1eb] transition-colors"
+                aria-label="Citation précédente"
+              >
+                <ChevronLeft size={20} />
+              </button>
+              <button
+                type="button"
+                onClick={nextSlide}
+                className="w-10 h-10 rounded-full border border-[#e5e0d8] flex items-center justify-center hover:bg-[#f5f1eb] transition-colors"
+                aria-label="Citation suivante"
+              >
+                <ChevronRight size={20} />
+              </button>
+            </div>
           </div>
 
           {/* Image */}

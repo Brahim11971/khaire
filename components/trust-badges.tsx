@@ -25,17 +25,17 @@ const badges = [
 
 export function TrustBadges() {
   return (
-    <section className="py-6 border-y border-border bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-6 border-y border-[#e5e0d8] bg-[#faf9f7]">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {badges.map((badge, index) => (
-            <div key={index} className="flex items-start gap-3">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-cream flex items-center justify-center">
-                <badge.icon size={18} className="text-forest" />
+            <div key={index} className="flex items-center gap-3">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#f5f1eb] flex items-center justify-center">
+                <badge.icon size={18} className="text-[#3d5a45]" />
               </div>
               <div>
-                <p className="text-sm font-medium text-foreground">{badge.title}</p>
-                <p className="text-xs text-muted">{badge.subtitle}</p>
+                <p className="text-sm font-medium text-[#1a1a1a]">{badge.title}</p>
+                <p className="text-xs text-[#6b6b6b]">{badge.subtitle}</p>
               </div>
             </div>
           ))}

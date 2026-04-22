@@ -58,8 +58,8 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-background border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <footer className="bg-[#faf9f7] border-t border-[#e5e0d8]">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="col-span-2">
@@ -72,7 +72,7 @@ export function Footer() {
                 className="h-7 w-auto"
               />
             </Link>
-            <p className="text-sm text-muted leading-relaxed max-w-xs">
+            <p className="text-sm text-[#6b6b6b] leading-relaxed max-w-xs">
               Jabadors, caftans et vêtements marocains traditionnels, faits main au Maroc.
             </p>
             <div className="flex items-center gap-4 mt-6">
@@ -80,7 +80,7 @@ export function Footer() {
                 <a
                   key={social.label}
                   href={social.href}
-                  className="text-muted hover:text-foreground transition-colors"
+                  className="text-[#6b6b6b] hover:text-[#1a1a1a] transition-colors"
                   aria-label={social.label}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -94,13 +94,13 @@ export function Footer() {
           {/* Links */}
           {Object.values(footerLinks).map((section) => (
             <div key={section.title}>
-              <h3 className="text-xs tracking-wider text-muted mb-4">{section.title}</h3>
+              <h3 className="text-xs tracking-[0.15em] text-[#6b6b6b] mb-4">{section.title}</h3>
               <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-foreground hover:text-forest transition-colors"
+                      className="text-sm text-[#1a1a1a] hover:text-[#3d5a45] transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -112,8 +112,8 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-border text-center">
-          <p className="text-sm text-muted">
+        <div className="mt-12 pt-8 border-t border-[#e5e0d8] text-center">
+          <p className="text-sm text-[#6b6b6b]">
             &copy; {new Date().getFullYear()} Khaire. Tous droits réservés.
           </p>
         </div>
