@@ -36,7 +36,7 @@ export function Hero() {
             src={productImages[currentImage].src}
             alt={productImages[currentImage].alt}
             fill
-            className="object-cover"
+            className="object-cover object-top"
             priority
             sizes="(max-width: 1024px) 100vw, 60vw"
           />
